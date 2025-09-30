@@ -1,6 +1,6 @@
 remote_theme: pages-themes/minimal@v0.2.0
 plugins:
   - jekyll-remote-theme # add this line to the plugins list if you already have one
-title: [Maturita z informatiky a výpočetní techniky na Gymnáziu Litoměřická]
-description: [Na této stránce najdete materiály a zdroje, které vám pomohou připravit se na maturitní zkoušku z informatiky a výpočetní techniky na Gymnáziu Litoměřická v Praze]
+title: [Maturita z IVT GymLit]
+description: [Maturita z informatiky a výpočetní techniky na Gymnáziu Litoměřická]
 # show_downloads: false
