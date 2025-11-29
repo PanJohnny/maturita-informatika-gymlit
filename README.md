@@ -16,7 +16,7 @@ Na této stránce najdete materiály a zdroje, které vám pomohou připravit se
 12. 2D počítačová grafika
 13. 3D počítačová grafika
 14. Multimédia
-15. Počítačové sítě
+15. ![Počítačové sítě](/okruhy/Počítačové%20sítě.md)
 16. Internet
 17. Webová aplikace
 18. Základy HTML, CSS a JS
@@ -27,3 +27,7 @@ Na této stránce najdete materiály a zdroje, které vám pomohou připravit se
 23. Programovací jazyk C#
 24. Objektově orientované programování
 25. Umělá inteligence
+
+## Licence
+- Texty na této stránce jsou licencovány pod [Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)](https://creativecommons.org/licenses/by-sa/4.0/).
+- Některé obrázky, pokud je uvedeno, jsou převzety z jiných zdrojů a podléhají jejich vlastním licencím.
