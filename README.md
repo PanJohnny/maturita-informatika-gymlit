@@ -16,7 +16,7 @@ Na této stránce najdete materiály a zdroje, které vám pomohou připravit se
 12. 2D počítačová grafika
 13. 3D počítačová grafika
 14. Multimédia
-15. [Počítačové sítě](/okruhy/Počítačové%20sítě.md)
+15. [Počítačové sítě](/okruhy/Počítačové%20sítě)
 16. Internet
 17. Webová aplikace
 18. Základy HTML, CSS a JS
