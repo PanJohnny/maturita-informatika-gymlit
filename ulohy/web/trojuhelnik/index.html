@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Modifikovatelný trojúhelník</title>
+
+    <link rel="stylesheet" href="style.css">
+    <!-- Defer zajistí, že se skript načte až po načtení HTML -->
+    <script src="trojuhelnik.js" defer></script>
+</head>
+<body>
+<!-- Header znamená hlavička stránky (info o stránce) -->
+<header>
+    <h1>Modifikovatelný trojúhelník</h1>
+    <p>Tento příklad demonstruje implementaci trojúhelníku u kterýho můžeme tahat vrcholy</p>
+</header>
+<div id="scene">
+    <!-- Tady použijeme canvas, protože je to tak jednodušší na kreslení. Nastavíme nějakou velikost (je to jednodušší)-->
+    <canvas id="canvas" width="500px" height="400px"></canvas>
+</div>
+</body>
+</html>

@@ -1,0 +1,18 @@
+/* Musíme definovat styly tak, aby to fungovalo. Dejme tomu, že chceme aby scéna zaujímala 100% šířky a výšky okna */
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    /* overflow musí být hidden, aby se zabránilo posuvníkům */
+    overflow: hidden;
+    display: flex;
+}
+
+#scene {
+    width: 100%;
+    height: 100vh; /* vh = viewport height, tedy výška okna prohlíčeče */
+    /* Pozice relativní, aby se daly absolutně pozicovat prvky uvnitř */
+    position: relative;
+    background-color: #f0f0f0; /* Světle šedé pozadí pro lepší viditelnost */
+}

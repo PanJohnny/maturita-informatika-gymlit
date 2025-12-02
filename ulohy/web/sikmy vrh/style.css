@@ -1,0 +1,14 @@
+#scene {
+    width: 100%;
+    height: 250px; /* nějaká pevná výška pro scénu */
+    /* Pozice relativní, aby se daly absolutně pozicovat prvky uvnitř */
+    position: relative;
+    background-color: #e0f7fa; /* Světle modré pozadí pro lepší viditelnost */
+}
+
+#object {
+    width: 10px;
+    height: 10px;
+    background-color: orange; /* Oranžová barva pro objekt */
+    position: absolute;
+}

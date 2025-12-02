@@ -28,6 +28,12 @@ Na této stránce najdete materiály a zdroje, které vám pomohou připravit se
 24. Objektově orientované programování
 25. Umělá inteligence
 
+## Úlohy HTML, CSS, JS
+- [Implementace jednoduché 2D kamery](ulohy/web/2d%20kamera/)
+- [Vykreslení modifikovatelného trojúhelníku](ulohy/web/modifikovatelny%20trojuhelnik/)
+- [Simulace šikmého vrhu](ulohy/web/sikmy%20vrh/)
+- Přidání endpointu do full-stack webové aplikace
+
 ## Licence
 - Texty na této stránce jsou licencovány pod [Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)](https://creativecommons.org/licenses/by-sa/4.0/).
 - Některé obrázky, pokud je uvedeno, jsou převzety z jiných zdrojů a podléhají jejich vlastním licencím.
