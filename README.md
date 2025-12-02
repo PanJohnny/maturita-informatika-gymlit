@@ -30,7 +30,7 @@ Na této stránce najdete materiály a zdroje, které vám pomohou připravit se
 
 ## Úlohy HTML, CSS, JS
 - [Implementace jednoduché 2D kamery](ulohy/web/2d%20kamera/)
-- [Vykreslení modifikovatelného trojúhelníku](ulohy/web/modifikovatelny%20trojuhelnik/)
+- [Vykreslení modifikovatelného trojúhelníku](ulohy/web/trojuhelnik/)
 - [Simulace šikmého vrhu](ulohy/web/sikmy%20vrh/)
 - Přidání endpointu do full-stack webové aplikace
 
