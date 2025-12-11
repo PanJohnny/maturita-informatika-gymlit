@@ -47,8 +47,8 @@
             }
 
             let addedStyles = false;
-            // nahradí všechny bloky $$ ... $$ vytvořeným HTML; pro každý blok nový generator
-            html = html.replace(/\$\$([\s\S]*?)\$\$/g, (full, content) => {
+            // github pages nahrazují $$ pomocí \[ \], takže to musíme vzít v úvahu
+            html = html.replace(/\\\[([\s\S]*?)\\]/g, (full, content) => {
                 const generator = new HtmlGenerator({ hyphenate: false });
                 const doc = parse("$$" + content + "$$", { generator }).htmlDocument();
                 if (!addedStyles) {
