@@ -24,6 +24,10 @@
         .katex-html, annotation {
             display: none !important;
         }
+
+        [hidden] {
+            display: none;
+        }
     </style>
     <script type="module">
         import { parse, HtmlGenerator } from "https://cdn.jsdelivr.net/npm/latex.js/dist/latex.mjs"
@@ -34,7 +38,9 @@
             const downloadPDF = document.querySelector("#pdf-button");
             if (downloadPDF) {
                 fetch(downloadPDF.href).then((s) => {
-                    downloadPDF.hidden = false;
+                    if (s.ok) {
+                        downloadPDF.removeAttribute("hidden");
+                    }
                 }, (e) => {
                     // ignore
                 })
