@@ -11,6 +11,64 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
     {% include head-custom.html %}
+
+    <style>
+        .inline {
+            display: inline !important;
+            vertical-align: baseline;
+        }
+        .inline, .inline * {
+            display: inline;
+        }
+
+        .katex-html, annotation {
+            display: none !important;
+        }
+    </style>
+    <script type="module">
+        import { parse, HtmlGenerator } from "https://cdn.jsdelivr.net/npm/latex.js/dist/latex.mjs"
+
+        document.addEventListener("DOMContentLoaded", () => {
+            let html = document.body.innerHTML;
+
+            const downloadPDF = document.querySelector("#pdf-button");
+            if (downloadPDF) {
+                fetch(downloadPDF.href).then((s) => {
+                    downloadPDF.hidden = false;
+                }, (e) => {
+                    // ignore
+                })
+            }
+
+            let addedStyles = false;
+            // nahradí všechny bloky $$ ... $$ vytvořeným HTML; pro každý blok nový generator
+            html = html.replace(/\$\$([\s\S]*?)\$\$/g, (match) => {
+                const generator = new HtmlGenerator({ hyphenate: false });
+                const doc = parse(match, { generator }).htmlDocument();
+                if (!addedStyles) {
+                    document.head.appendChild(generator.stylesAndScripts(""))
+                    addedStyles = true;
+                }
+                return doc.body.outerHTML;
+            });
+
+            html = html.replace(/(^|[^\\])\$(?!\$)([\s\S]*?)(?<!\\)\$(?!\$)/g, (full, prefix, content) => {
+                const generator = new HtmlGenerator({ hyphenate: false });
+                // předáme parseru celý delimitovaný výraz, aby byl parsován jako math režim
+                const doc = parse("$" + content + "$", { generator }).htmlDocument();
+                if (!addedStyles) {
+                    document.head.appendChild(generator.stylesAndScripts(""));
+                    addedStyles = true;
+                }
+
+                doc.body.querySelector(".body").classList.add("inline");
+                // vrátíme zachovaný prefix + vykonvertovaný HTML
+                return prefix + doc.body.outerHTML;
+            });
+
+            document.body.innerHTML = html;
+        });
+    </script>
 </head>
 <body>
 <a id="skip-to-content" href="#content">Skip to the content.</a>
@@ -22,7 +80,7 @@
     {% if site.github.is_project_page %}
     <a href="{{ site.github.repository_url }}" class="btn">GitHub</a>
     {% endif %}
-    <a href="/pdf_versions{{ page.url | replace: '.html', '.pdf' }}" class="btn">Otevřít jako PDF</a>
+    <a href="/pdf_versions{{ page.url | replace: '.html', '.pdf' }}" class="btn" id="pdf-button" hidden>Otevřít jako PDF</a>
     {% if site.show_downloads %}
     <a href="{{ site.github.zip_url }}" class="btn">Download .zip</a>
     <a href="{{ site.github.tar_url }}" class="btn">Download .tar.gz</a>
