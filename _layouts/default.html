@@ -46,16 +46,10 @@
                 })
             }
 
-            let addedStyles = false;
-
             html = html.replace(/(^|[^\\])\$(?!\$)([\s\S]*?)(?<!\\)\$(?!\$)/g, (full, prefix, content) => {
                 const generator = new HtmlGenerator({ hyphenate: false });
                 // předáme parseru celý delimitovaný výraz, aby byl parsován jako math režim
                 const doc = parse("$" + content + "$", { generator }).htmlDocument();
-                if (!addedStyles) {
-                    document.head.appendChild(generator.stylesAndScripts("https://cdn.jsdelivr.net/npm/latex.js/dist/"));
-                    addedStyles = true;
-                }
 
                 doc.body.querySelector(".body").classList.add("inline");
                 // vrátíme zachovaný prefix + vykonvertovaný HTML
