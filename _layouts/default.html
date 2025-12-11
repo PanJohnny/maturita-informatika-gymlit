@@ -48,9 +48,9 @@
 
             let addedStyles = false;
             // nahradí všechny bloky $$ ... $$ vytvořeným HTML; pro každý blok nový generator
-            html = html.replace(/\$\$([\s\S]*?)\$\$/g, (match) => {
+            html = html.replace(/\$\$([\s\S]*?)\$\$/g, (full, content) => {
                 const generator = new HtmlGenerator({ hyphenate: false });
-                const doc = parse("$$" + match + "$$", { generator }).htmlDocument();
+                const doc = parse("$$" + content + "$$", { generator }).htmlDocument();
                 if (!addedStyles) {
                     document.head.appendChild(generator.stylesAndScripts("https://cdn.jsdelivr.net/npm/latex.js/dist/"))
                     addedStyles = true;
