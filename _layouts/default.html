@@ -47,16 +47,6 @@
             }
 
             let addedStyles = false;
-            // github pages nahrazují $$ pomocí \[ \], takže to musíme vzít v úvahu
-            html = html.replace(/\\\[([\s\S]*?)\\]/g, (full, content) => {
-                const generator = new HtmlGenerator({ hyphenate: false });
-                const doc = parse("$$" + content + "$$", { generator }).htmlDocument();
-                if (!addedStyles) {
-                    document.head.appendChild(generator.stylesAndScripts("https://cdn.jsdelivr.net/npm/latex.js/dist/"))
-                    addedStyles = true;
-                }
-                return doc.body.outerHTML;
-            });
 
             html = html.replace(/(^|[^\\])\$(?!\$)([\s\S]*?)(?<!\\)\$(?!\$)/g, (full, prefix, content) => {
                 const generator = new HtmlGenerator({ hyphenate: false });
