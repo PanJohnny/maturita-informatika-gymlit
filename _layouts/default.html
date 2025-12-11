@@ -52,7 +52,7 @@
                 const generator = new HtmlGenerator({ hyphenate: false });
                 const doc = parse(match, { generator }).htmlDocument();
                 if (!addedStyles) {
-                    document.head.appendChild(generator.stylesAndScripts(""))
+                    document.head.appendChild(generator.stylesAndScripts("https://cdn.jsdelivr.net/npm/latex.js/dist/"))
                     addedStyles = true;
                 }
                 return doc.body.outerHTML;
@@ -63,7 +63,7 @@
                 // předáme parseru celý delimitovaný výraz, aby byl parsován jako math režim
                 const doc = parse("$" + content + "$", { generator }).htmlDocument();
                 if (!addedStyles) {
-                    document.head.appendChild(generator.stylesAndScripts(""));
+                    document.head.appendChild(generator.stylesAndScripts("https://cdn.jsdelivr.net/npm/latex.js/dist/"));
                     addedStyles = true;
                 }
 
