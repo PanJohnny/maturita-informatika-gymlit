@@ -50,7 +50,7 @@
             // nahradí všechny bloky $$ ... $$ vytvořeným HTML; pro každý blok nový generator
             html = html.replace(/\$\$([\s\S]*?)\$\$/g, (match) => {
                 const generator = new HtmlGenerator({ hyphenate: false });
-                const doc = parse(match, { generator }).htmlDocument();
+                const doc = parse("$$" + match + "$$", { generator }).htmlDocument();
                 if (!addedStyles) {
                     document.head.appendChild(generator.stylesAndScripts("https://cdn.jsdelivr.net/npm/latex.js/dist/"))
                     addedStyles = true;
