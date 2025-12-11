@@ -6,9 +6,7 @@ Vytvořte celkem 2 funkce s jediným vstupním parametrem N, jejichž výstupem 
 
 ### Eulerova
 
-$$
-a_1 = 1, a_n = \frac{1}{n^2} \to \frac{n^2}{6} = \sum^{\infty}_{n=1}{a_n}
-$$
+$a_1 = 1, a_n = \frac{1}{n^2} \to \frac{n^2}{6} = \sum^{\infty}_{n=1}{a_n}$
 
 ```csharp
 double Euler(int n)
@@ -30,9 +28,7 @@ Console.WriteLine("Euler for n = {1}: {0}", Euler(repetitions), repetitions);
 
 ### Ludolfova
 
-$$
-a_1 = 1, a_n = \frac{(-1)^{n-1}}{2n-1} \to \frac{\pi}{4} = \sum^{\infty}_{n=1}{a_n}
-$$
+$a_1 = 1, a_n = \frac{(-1)^{n-1}}{2n-1} \to \frac{\pi}{4} = \sum^{\infty}_{n=1}{a_n}$
 
 ```csharp
 double Leibniz(int n)
@@ -59,9 +55,7 @@ Vytvořte funkci s jediným vstupním parametrem N, jejímž výstupem bude apro
 
 ### Viétova
 
-$$
-a_1 = \sqrt{\frac{1}{2}}, a_n = \sqrt{\frac{1}{2} + \frac{1}{2} \sqrt{a_{n-1}}} \to \frac{2}{\pi} = \prod_{n=1}^{\infty} a_n
-$$
+$a_1 = \sqrt{\frac{1}{2}}, a_n = \sqrt{\frac{1}{2} + \frac{1}{2} \sqrt{a_{n-1}}} \to \frac{2}{\pi} = \prod_{n=1}^{\infty} a_n$
 
 ```csharp
 double Viete(int n)
