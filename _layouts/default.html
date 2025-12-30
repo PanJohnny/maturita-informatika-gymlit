@@ -35,17 +35,6 @@
         document.addEventListener("DOMContentLoaded", () => {
             let html = document.body.innerHTML;
 
-            const downloadPDF = document.querySelector("#pdf-button");
-            if (downloadPDF) {
-                fetch(downloadPDF.href).then((s) => {
-                    if (s.ok) {
-                        downloadPDF.removeAttribute("hidden");
-                    }
-                }, (e) => {
-                    // ignore
-                })
-            }
-
             html = html.replace(/(^|[^\\])\$(?!\$)([\s\S]*?)(?<!\\)\$(?!\$)/g, (full, prefix, content) => {
                 const generator = new HtmlGenerator({ hyphenate: false });
                 // předáme parseru celý delimitovaný výraz, aby byl parsován jako math režim
@@ -57,6 +46,17 @@
             });
 
             document.body.innerHTML = html;
+
+            const downloadPDF = document.querySelector("#pdf-button");
+            if (downloadPDF) {
+                fetch(downloadPDF.href).then((s) => {
+                    if (s.ok) {
+                        downloadPDF.removeAttribute("hidden");
+                    }
+                }, (e) => {
+                    // ignore
+                })
+            }
         });
     </script>
 </head>
