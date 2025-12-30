@@ -37,6 +37,7 @@ Na této stránce najdete materiály a zdroje, které vám pomohou připravit se
 ## Úlohy C#
 - [Aproximace Ludolfova čísla](ulohy/csharp/ludolfovo-cislo)
 - [Vlastní datový typ - vektory](ulohy/csharp/vektory)
+- [Vlastní datový typ - matice](ulohy/csharp/matice)
 
 ## Licence
 - Texty na této stránce jsou licencovány pod [Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)](https://creativecommons.org/licenses/by-sa/4.0/).
