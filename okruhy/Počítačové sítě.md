@@ -147,6 +147,19 @@
       * SSL (secure socket layer)  
       * TLS (transport layer security)  
         * novější
+* protokol IP
+    * všechno připojené do sítě má IP adresu (jak třeba pro LAN, tak pro celý Internet)
+    * jsou různé rezervované rozsahy
+        * např. loopback 127.0.0.1
+        * 10.0.0.1 \- 10.0.0.255
+    * dvě verze adres
+        * IPv4 – 4 čísla o 8 bitech (0-255) oddělené tečkou
+            * 142.251.141.174
+            * všechny už použité (rok 2011\)
+            * (celkem 64 bitů)
+        * IPv6 – 128 bitové, zapsáno hexadecimálně
+            * 2001:db8:0:1234:0:567:8:1
+            * 8 skupin po 4 číslech
 
 ## Dělení
 
