@@ -39,6 +39,9 @@ Na této stránce najdete materiály a zdroje, které vám pomohou připravit se
 - [Vlastní datový typ - vektory](ulohy/csharp/vektory)
 - [Vlastní datový typ - matice](ulohy/csharp/matice)
 
+## Nástroje
+- [Nástroj pro stavbu logických obvodů](/obvody)
+
 ## Licence
 - Texty na této stránce jsou licencovány pod [Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)](https://creativecommons.org/licenses/by-sa/4.0/).
 - Některé obrázky, pokud je uvedeno, jsou převzety z jiných zdrojů a podléhají jejich vlastním licencím.
