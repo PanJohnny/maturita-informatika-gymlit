@@ -19,7 +19,7 @@ Na této stránce najdete materiály a zdroje, které vám pomohou připravit se
 15. [Počítačové sítě](/okruhy/Počítačové%20sítě)
 16. [Internet](/okruhy/Internet)
 17. [Webová aplikace](/okruha/Webová&20aplikace)
-18. [Základy HTML, CSS a JS](okruhy/Základy%20HTML,%20CSS%20a%20JS.md)
+18. [Základy HTML, CSS a JS](okruhy/Základy%20HTML,%20CSS%20a%20JS)
 19. Databáze
 20. Základy SQL
 21. Algoritmizace
@@ -38,6 +38,9 @@ Na této stránce najdete materiály a zdroje, které vám pomohou připravit se
 - [Aproximace Ludolfova čísla](ulohy/csharp/ludolfovo-cislo)
 - [Vlastní datový typ - vektory](ulohy/csharp/vektory)
 - [Vlastní datový typ - matice](ulohy/csharp/matice)
+
+## Nástroje
+- [Nástroj pro stavbu logických obvodů](/obvody)
 
 ## Licence
 - Texty na této stránce jsou licencovány pod [Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)](https://creativecommons.org/licenses/by-sa/4.0/).
