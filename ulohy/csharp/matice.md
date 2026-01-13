@@ -109,5 +109,40 @@ class Matrix
 
         return new Matrix(result);
     }
+    
+    public static Matrix operator *(Matrix m1, Matrix m2)
+    {
+        if (m1.GetWidth() != m2.GetHeight())
+        {
+            throw new ArgumentException("The width of the first matrix must be equal to the height of the other one");
+        }
+
+        int width = m2.GetWidth();
+        int height = m1.GetHeight();
+        
+        // sdílené číslo, 
+        int shared = m1.GetWidth(); // stejná jako m2.GetHeight()
+        
+        double[,] newMatrix = new double[width,height];
+
+        // Pro každý řádek m1 (row) a sloupec m2 (col) součet přes sdílený index k
+        for (int row = 0; row < m1.GetHeight(); row++)
+        {
+            for (int col = 0; col < m2.GetWidth(); col++)
+            {
+                double sum = 0;
+                
+                for (int k = 0; k < shared; k++)
+                {
+                    // GetNum(column, row)
+                    sum += m1.GetNum(k, row) * m2.GetNum(col, k);
+                }
+
+                newMatrix[col, row] = sum;
+            }
+        }
+
+        return new Matrix(newMatrix);
+    }
 }
 ```
