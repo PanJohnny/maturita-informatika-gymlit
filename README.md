@@ -20,7 +20,7 @@ Na této stránce najdete materiály a zdroje, které vám pomohou připravit se
 16. [Internet](/okruhy/Internet)
 17. [Webová aplikace](/okruha/Webová&20aplikace)
 18. [Základy HTML, CSS a JS](okruhy/Základy%20HTML,%20CSS%20a%20JS)
-19. Databáze
+19. [Databáze](/okruhy/Databáze)
 20. Základy SQL
 21. Algoritmizace
 22. Programovací jazyky
