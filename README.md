@@ -36,6 +36,7 @@ Na této stránce najdete materiály a zdroje, které vám pomohou připravit se
 
 ## Úlohy C#
 - [Aproximace Ludolfova čísla](ulohy/csharp/ludolfovo-cislo)
+- [Výpočet obsahu plochy pod grafem funkce](ulohy/csharp/obsah-pod-grafem)
 - [Vlastní datový typ - vektory](ulohy/csharp/vektory)
 - [Vlastní datový typ - matice](ulohy/csharp/matice)
 
