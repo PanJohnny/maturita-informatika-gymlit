@@ -29,9 +29,9 @@ Na této stránce najdete materiály a zdroje, které vám pomohou připravit se
 25. Umělá inteligence
 
 ## Úlohy HTML, CSS, JS
-- [Implementace jednoduché 2D kamery](ulohy/web/2d%20kamera/)
-- [Vykreslení modifikovatelného trojúhelníku](ulohy/web/trojuhelnik/)
-- [Simulace šikmého vrhu](ulohy/web/sikmy%20vrh/)
+- [Implementace jednoduché 2D kamery](ulohy/web/2d%20kamera/info)
+- [Vykreslení modifikovatelného trojúhelníku](ulohy/web/trojuhelnik/info)
+- [Simulace šikmého vrhu](ulohy/web/sikmy%20vrh/info)
 - Přidání endpointu do full-stack webové aplikace
 
 ## Úlohy C#
