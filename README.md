@@ -21,27 +21,27 @@ Na této stránce najdete materiály a zdroje, které vám pomohou připravit se
 17. [Webová aplikace](/okruhy/Webová%20aplikace)
 18. [Základy HTML, CSS a JS](okruhy/Základy%20HTML,%20CSS%20a%20JS)
 19. [Databáze](/okruhy/Databáze)
-20. Základy SQL
-21. Algoritmizace
-22. Programovací jazyky
-23. Programovací jazyk C#
-24. Objektově orientované programování
+20. [Základy SQL](/okruhy/Základy%20SQL)
+21. [Algoritmizace](/okruhy/Algoritmizace)
+22. [Programovací jazyky](/okruhy/Programovací%20jazyky)
+23. [Programovací jazyk C#](/okruhy/Programovací%20jazyk%20C%23)
+24. [Objektově orientované programování](/okruhy/Objektově%20orientované%20programování)
 25. Umělá inteligence
 
 ## Úlohy HTML, CSS, JS
 - [Implementace jednoduché 2D kamery](ulohy/web/2d%20kamera/info)
 - [Vykreslení modifikovatelného trojúhelníku](ulohy/web/trojuhelnik/info)
 - [Simulace šikmého vrhu](ulohy/web/sikmy%20vrh/info)
-- Přidání endpointu do full-stack webové aplikace
 
 ## Úlohy C#
 - [Aproximace Ludolfova čísla](ulohy/csharp/ludolfovo-cislo)
 - [Výpočet obsahu plochy pod grafem funkce](ulohy/csharp/obsah-pod-grafem)
 - [Vlastní datový typ - vektory](ulohy/csharp/vektory)
 - [Vlastní datový typ - matice](ulohy/csharp/matice)
-- Detekce kolizí základních 2D objektů
-  - geometrické tvary
+- [Detekce kolizí základních 2D objektů](/ulohy/csharp/detekce-kolizi-zakladnich-2d-objektu)
 - Databáze v C#
+  - prakticky úloha na SQL
+  - bude nástroj pro přístup k DB a vy ukážete několik queries, které se dají použít pro práci s databází
 
 ## Nástroje
 - [Nástroj pro stavbu logických obvodů](/obvody)
