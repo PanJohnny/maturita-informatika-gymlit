@@ -4,14 +4,14 @@ Na této stránce najdete materiály a zdroje, které vám pomohou připravit se
 ## Maturitní okruhy
 1. Informace a dvojková soustava
 2. Digitální reprezentace informací
-3. Přenos informací
-4. Historie a technologie výpočetní techniky
+3. [Přenos informací](/okruhy/Přenos%20informací)
+4. [Historie a technologie výpočetní techniky](/okruhy/Historie%20a%20technologie%20výpočetní%20techniky)
 5. Základy číslicové techniky
 6. Počítač a jeho komponenty
 7. GPU a CPU
 8. Paměť
-9. Periferní zařízení připojená k počítači
-10. Operační systémy
+9. [Periferní zařízení připojená k počítači](/okruhy/Periferní%20zařízení%20připojená%20k%20počítači)
+10. [Operační systémy](/okruhy/Operační%20systémy)
 11. Desktopové aplikace
 12. 2D počítačová grafika
 13. 3D počítačová grafika
