@@ -11,6 +11,13 @@
 2. Vytvořte funkci, která porovná výstup funkce integral() s přesně matematickým výsledkem pro konstantní a lineární funkce f.
 
 ```csharp
+// Definice nějaké funkce
+double Linear(double x)
+{
+    return -4*x + 10;
+}
+
+// Úkol 1
 double Integral(Func<double, double> f, double a, double b, double n)
 {
     double step = (b - a) / n;
@@ -26,11 +33,7 @@ double Integral(Func<double, double> f, double a, double b, double n)
     return sum;
 }
 
-double Linear(double x)
-{
-    return -4*x + 10;
-}
-
+// Úkol 2
 double CalculateDiffWithExactLinear(Func<double, double> f, double a, double b, double n)
 {
     double lichobezník = (f(a) + f(b)) / 2 * (b - a);
@@ -39,6 +42,7 @@ double CalculateDiffWithExactLinear(Func<double, double> f, double a, double b, 
     return integral / lichobezník;
 }
 
-Console.WriteLine("Integral for y = -4x10 is {0}", Integral(Linear, 0, 100, 100));
-Console.WriteLine("Integral / exact for 4x is {0}", CalculateDiffWithExactLinear(Linear, 0, 100, 100));
+// Test
+Console.WriteLine("Integral for y = -4x + 10 is {0}", Integral(Linear, 0, 100, 100)); // Integral for y = -4x + 10 is -18800
+Console.WriteLine("Integral / exact for y = -4x + 10 is {0}", CalculateDiffWithExactLinear(Linear, 0, 100, 100)); // Integral / exact for y = -4x + 10 is 0,9894736842105263
 ```

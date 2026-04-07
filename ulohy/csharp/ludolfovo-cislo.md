@@ -26,7 +26,7 @@ double Euler(int n)
 Console.WriteLine("Euler for n = {1}: {0}", Euler(repetitions), repetitions);
 ```
 
-### Ludolfova
+### Leibnizova
 
 $a_1 = 1, a_n = \frac{(-1)^{n-1}}{2n-1} \to \frac{\pi}{4} = \sum^{\infty}_{n=1}{a_n}$
 
@@ -118,4 +118,38 @@ void RateOnConvergence(double accuracy)
 }
 
 RateOnConvergence(0.2);
+
+// Alternativní řešení pomocí reflections API
+List<string> RateOnConvergence(double accuracy)
+{
+    List<Func<int, double>> functions = [
+        EulerApprox, LeibnizApprox, VieteApprox
+       ];
+
+    List<string> orderedNames = [];
+
+
+    for (int N = 1; orderedNames.Count != functions.Count; N++)
+    {
+        foreach (var func in functions)
+        {
+            if (orderedNames.Contains(func.GetMethodInfo().Name))
+            {
+                continue;
+            }
+
+            double result = func.Invoke(N);
+
+            if (Math.Abs(Math.PI - result) <= accuracy)
+            {
+                orderedNames.Add(func.GetMethodInfo().Name);
+            }
+        }
+    }
+
+    return orderedNames;
+}
 ```
+
+## Poznámka
+Hodnocení podle konvergence se dá zjednodušit tím, že bychom to implementovali staticky tak, že pro každé N nemusíme volat metodu, ale aplikovali bychom další iteraci posloupnosti.

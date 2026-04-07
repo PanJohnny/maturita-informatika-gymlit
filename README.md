@@ -28,20 +28,35 @@ Na této stránce najdete materiály a zdroje, které vám pomohou připravit se
 24. [Objektově orientované programování](/okruhy/Objektově%20orientované%20programování)
 25. Umělá inteligence
 
-## Úlohy HTML, CSS, JS
-- [Implementace jednoduché 2D kamery](ulohy/web/2d%20kamera/info)
-- [Vykreslení modifikovatelného trojúhelníku](ulohy/web/trojuhelnik/info)
-- [Simulace šikmého vrhu](ulohy/web/sikmy%20vrh/info)
+## Praktická zkouška
+Praktická zkouška je hodina práce a 15 minut prezentace.
 
-## Úlohy C#
-- [Aproximace Ludolfova čísla](ulohy/csharp/ludolfovo-cislo)
-- [Výpočet obsahu plochy pod grafem funkce](ulohy/csharp/obsah-pod-grafem)
-- [Vlastní datový typ - vektory](ulohy/csharp/vektory)
-- [Vlastní datový typ - matice](ulohy/csharp/matice)
+- [PDF zadání](/ulohy/typove_ulohy.pdf)
+- [Pomocné texty](#Pomocné%20texty)
+
+### Řešení typových úloh
+
+#### Úlohy HTML, CSS, JS
+- [Implementace jednoduché 2D kamery](/ulohy/web/2d%20kamera/info)
+- [Vykreslení modifikovatelného trojúhelníku](/ulohy/web/trojuhelnik/info)
+- [Simulace šikmého vrhu](/ulohy/web/sikmy%20vrh/info)
+
+#### Úlohy C#
+- [Aproximace Ludolfova čísla](/ulohy/csharp/ludolfovo-cislo)
+- [Výpočet obsahu plochy pod grafem funkce](/ulohy/csharp/obsah-pod-grafem)
+- [Vlastní datový typ - vektory](/ulohy/csharp/vektory)
+- [Vlastní datový typ - matice](/ulohy/csharp/matice)
 - [Detekce kolizí základních 2D objektů](/ulohy/csharp/detekce-kolizi-zakladnich-2d-objektu)
 - Databáze v C#
   - prakticky úloha na SQL
   - bude nástroj pro přístup k DB a vy ukážete několik queries, které se dají použít pro práci s databází
+
+### Pomocné texty
+- [Eulerova metoda](/ulohy/texty/Eulerova%20metoda.pdf)
+- [Integrál](/ulohy/texty/Integrál.pdf)
+- [Kolize základních 2D objektů](/ulohy/texty/Kolize%20základních%202D%20objektů.pdf)
+- [Matice](/ulohy/texty/Matice.pdf)
+- [Vektory](/ulohy/texty/Vektory.pdf)
 
 ## Nástroje
 - [Nástroj pro stavbu logických obvodů](/obvody)
