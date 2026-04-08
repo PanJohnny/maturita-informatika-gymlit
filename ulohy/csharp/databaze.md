@@ -1,5 +1,7 @@
 # Databáze v C#
 
+GitHub projekt: [https://github.com/JindrichDvorak/SQLiteCs-Project.git](https://github.com/JindrichDvorak/SQLiteCs-Project.git.)
+
 Vytvořte metodu PrintDataTable(), která přijme výstup funkce Query(),
 tedy object typu QueryResult a přehledně jej vykreslí do konzole jako tabulku
 (nemusí být ohraničená).
