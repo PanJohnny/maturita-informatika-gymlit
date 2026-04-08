@@ -47,6 +47,31 @@ class Camera {
 // Vytvoříme instanci kamery
 const camera = new Camera();
 
+let objects = [];
+
+class MovableObject {
+    constructor(x, y, element) {
+        this.x = x;
+        this.y = y;
+        this.element = element;
+        this.element.style.position = "absolute"; // Abychom mohli posouvat element pomocí left a top
+        objects.push(this);
+    }
+
+    move(dx, dy) {
+        this.x += dx;
+        this.y += dy;
+        this.element.style.left = this.x + "px";
+        this.element.style.top = this.y + "px";
+    }
+
+    getClientRect() {
+        return this.element.getBoundingClientRect();
+    }
+}
+
+new MovableObject(0,0, document.getElementById("movable"));
+
 /*
 Levé tlačítko myši + pohyb = posun kamery.
 
@@ -71,7 +96,19 @@ document.addEventListener("mouseup", (e) => {
 // Přidáme event listener pro pohyb myši
 document.addEventListener("mousemove", (e) => {
     if (isDragging) {
-        camera.move(e.movementX, e.movementY);
+        // check if it is in a movable object
+        let inObject = false;
+        for (let obj of objects) {
+            // getClientRect nám vrátí objekt s vlastnostmi left, top, right, bottom, které nám říkají pozici a velikost elementu na obrazovce
+            let rect = obj.getClientRect();
+            if (e.clientX >= rect.left && e.clientX <= rect.right && e.clientY >= rect.top && e.clientY <= rect.bottom) {
+                inObject = true;
+                obj.move(e.movementX, e.movementY);
+                break;
+            }
+        }
+        if (!inObject)
+            camera.move(e.movementX, e.movementY);
     }
 });
 
@@ -81,3 +118,16 @@ document.addEventListener("wheel", (e) => {
     // My chceme, aby rolování nahoru přibližovalo (zvětšovalo zoom), takže použijeme -e.deltaY
     camera.zoomBy(-e.deltaY * 0.001); // Násobíme malým číslem, aby to nebylo moc rychlé
 });
+
+document.querySelector("#add-object").addEventListener("click", (e) => {
+    const newElement = document.createElement("img");
+    let pointerX = e.clientX;
+    let pointerY = e.clientY;
+    newElement.style.left = pointerX + "px";
+    newElement.style.top = pointerY + "px";
+    newElement.src = "https://http.cat/301";
+    newElement.style.pointerEvents = "none";
+    scene.appendChild(newElement);
+    new MovableObject(pointerX, pointerY, newElement);
+    isDragging = true;
+})

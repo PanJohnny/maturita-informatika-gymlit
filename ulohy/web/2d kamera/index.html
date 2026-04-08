@@ -12,10 +12,12 @@
     <script src="kamera.js" defer></script>
 </head>
 <body>
-<div id="scene">
-    <!-- Nějaký objekty ve scéně -->
-    <h1>2D kamera</h1>
-    <p>Tento příklad demonstruje implementaci 2D kamery</p>
+<div id="viewport">
+    <div id="scene">
+        <img src="https://http.cat/404" alt="Mimo" style="pointer-events: none; top: -800px; position: absolute">
+        <img src="https://http.cat/200" alt="Pohybující zábava" id="movable" style="pointer-events: none;">
+        <button type="button" id="add-object" style="position: absolute; top: 100px; right: 150px;">Přidat objekt</button>
+    </div>
 </div>
 </body>
 </html>

@@ -37,7 +37,11 @@ Praktická zkouška je hodina práce a 15 minut prezentace.
 ### Řešení typových úloh
 
 #### Úlohy HTML, CSS, JS
+Poznámka: dema fungují jen na PC kvůli specifickým eventům, kdyžtak se dá použít touchdown, ...
+
 - [Implementace jednoduché 2D kamery](/ulohy/web/2d%20kamera/info)
+
+Následující 2 jsou udělány jinak než podle zadání, ale můžete ze z toho odpíchnout:
 - [Vykreslení modifikovatelného trojúhelníku](/ulohy/web/trojuhelnik/info)
 - [Simulace šikmého vrhu](/ulohy/web/sikmy%20vrh/info)
 
@@ -45,7 +49,7 @@ Praktická zkouška je hodina práce a 15 minut prezentace.
 - [Aproximace Ludolfova čísla](/ulohy/csharp/ludolfovo-cislo)
 - [Výpočet obsahu plochy pod grafem funkce](/ulohy/csharp/obsah-pod-grafem)
 - [Vlastní datový typ - vektory](/ulohy/csharp/vektory)
-- [Vlastní datový typ - matice](/ulohy/csharp/matice)
+- [Vlastní datový typ - matice](/ulohy/csharp/matice) - nedodělané, ale můžete ze z toho odpíchnout
 - [Detekce kolizí základních 2D objektů](/ulohy/csharp/detekce-kolizi-zakladnich-2d-objektu)
 - [Databáze v C#](/ulohy/csharp/databaze)
 

@@ -4,6 +4,27 @@
 - [css](#css)
 - [javascript](#javascript)
 
+1. Ve vaší webové stránce vytvořte „oblast“, kterou budeme dále označovat jako
+   viewport – oblast reprezentující zorné pole kamery. Dále vytvořte oblast jako
+   child viewportu, kterou označíme jako scene – oblast reprezentující prostor, ve
+   kterém bude možné vykreslovat různé objekty jako HTML elementy.
+2. Do oblasti scene umístěte minimálně dva různé objekty tak, aby jeden byl vidět,
+   protože se nachází v oblasti určené viewportem a ten druhý nebyl vidět, protože
+   se nachází mimo oblast určenou viewportem.
+3. Vytvořte třídu Camera, která umožní uživateli pohybovat s oblastí scene pomocí
+   myši takzvaným „dragováním“ – pokud uživatel přesune ukazatel myši na oblast
+   scene a bude mít stisknuté dané tlačítko (například levé), pak se celá oblast scene
+   začne posouvat společně s ukazatelem myši.
+4. Vytvořte třídu MovableObject, pomocí které bude možné efektivně přidávat
+   různé objekty do oblasti scene.
+5. Modifikujte třídu MovableObject tak, aby uživateli umožnila měnit polohu
+   vykresleného objektu v oblasti scene dragováním (viz pracovní úkol 3, ale pozor,
+   implementace pro MovableObject se může lišit od implementace této funkce
+   v třídě Camera).
+6. Přidejte do vaší webové stránky tlačítko, po jehož stisknutí vznikne nový objekt třídy
+   MovableObject, který se bude pohybovat společně s ukazatelem myši, dokud
+   uživatel nestiskne dané tlačítko myši (opět například levé) v oblasti scene.
+
 <iframe src="./" width="100%" height="400px">
     <a href="./">Zobrazit demonstraci</a>
 </iframe>
@@ -24,10 +45,12 @@
     <script src="kamera.js" defer></script>
 </head>
 <body>
-<div id="scene">
-    <!-- Nějaký objekty ve scéně -->
-    <h1>2D kamera</h1>
-    <p>Tento příklad demonstruje implementaci 2D kamery</p>
+<div id="viewport">
+    <div id="scene">
+        <img src="https://http.cat/404" alt="Mimo" style="pointer-events: none; top: -800px; position: absolute">
+        <img src="https://http.cat/200" alt="Pohybující zábava" id="movable" style="pointer-events: none;">
+        <button type="button" id="add-object" style="position: absolute; top: 100px; right: 150px;">Přidat objekt</button>
+    </div>
 </div>
 </body>
 </html>
@@ -47,6 +70,10 @@ body {
 }
 
 #scene {
+    position: relative;
+}
+
+#viewport {
     width: 100%;
     height: 100vh; /* vh = viewport height, tedy výška okna prohlíčeče */
     /* Pozice relativní, aby se daly absolutně pozicovat prvky uvnitř */
@@ -106,6 +133,31 @@ class Camera {
 // Vytvoříme instanci kamery
 const camera = new Camera();
 
+let objects = [];
+
+class MovableObject {
+    constructor(x, y, element) {
+        this.x = x;
+        this.y = y;
+        this.element = element;
+        this.element.style.position = "absolute"; // Abychom mohli posouvat element pomocí left a top
+        objects.push(this);
+    }
+
+    move(dx, dy) {
+        this.x += dx;
+        this.y += dy;
+        this.element.style.left = this.x + "px";
+        this.element.style.top = this.y + "px";
+    }
+
+    getClientRect() {
+        return this.element.getBoundingClientRect();
+    }
+}
+
+new MovableObject(0,0, document.getElementById("movable"));
+
 /*
 Levé tlačítko myši + pohyb = posun kamery.
 
@@ -130,7 +182,19 @@ document.addEventListener("mouseup", (e) => {
 // Přidáme event listener pro pohyb myši
 document.addEventListener("mousemove", (e) => {
     if (isDragging) {
-        camera.move(e.movementX, e.movementY);
+        // check if it is in a movable object
+        let inObject = false;
+        for (let obj of objects) {
+            // getClientRect nám vrátí objekt s vlastnostmi left, top, right, bottom, které nám říkají pozici a velikost elementu na obrazovce
+            let rect = obj.getClientRect();
+            if (e.clientX >= rect.left && e.clientX <= rect.right && e.clientY >= rect.top && e.clientY <= rect.bottom) {
+                inObject = true;
+                obj.move(e.movementX, e.movementY);
+                break;
+            }
+        }
+        if (!inObject)
+            camera.move(e.movementX, e.movementY);
     }
 });
 
@@ -140,4 +204,17 @@ document.addEventListener("wheel", (e) => {
     // My chceme, aby rolování nahoru přibližovalo (zvětšovalo zoom), takže použijeme -e.deltaY
     camera.zoomBy(-e.deltaY * 0.001); // Násobíme malým číslem, aby to nebylo moc rychlé
 });
+
+document.querySelector("#add-object").addEventListener("click", (e) => {
+    const newElement = document.createElement("img");
+    let pointerX = e.clientX;
+    let pointerY = e.clientY;
+    newElement.style.left = pointerX + "px";
+    newElement.style.top = pointerY + "px";
+    newElement.src = "https://http.cat/301";
+    newElement.style.pointerEvents = "none";
+    scene.appendChild(newElement);
+    new MovableObject(pointerX, pointerY, newElement);
+    isDragging = true;
+})
 ```
