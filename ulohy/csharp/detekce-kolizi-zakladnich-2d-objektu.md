@@ -1,5 +1,7 @@
 # Detekce kolizí základních 2D objektů
 
+Pomocný text: [Detekce kolizí základních 2D objektů](/ulohy/texty/Kolize%20z%C3%A1kladn%C3%ADch%202D%20objekt%C5%AF.pdf)
+
 * k dispozici máme 2 druhy objektů:
     * kruh (Circle)
         * vlastnosti: střed (x, y), poloměr r
@@ -64,6 +66,4 @@ Interaktivní demonstrace: https://www.geogebra.org/m/r7qyyxpe
 
 ## Kolize obdelníku a kruhu
 
-Nejtěžší z těchto tří. Nebude nejspíš v maturitě. Vyžaduje použití `Math.Clamp`.
-
-_Bude dodáno..._
+Nejtěžší z těchto tří. Nebude nejspíš v maturitě. Zapomněl jsem to sem dát :(. Tak si na to přiďte sami :-)

@@ -1,11 +1,14 @@
 # Matice
 
-Stručný popis: Cílem je vytvořit třídu, která implementuje matici o rozměrech 𝑚 × 𝑛,
-přetíží operátor sčítání (sčítání matic) a operátor násobení (násobení matic) a implementuje
-funkce výpočtu „trace“ (součet prvků na diagonále) a „transpozice“ (prohození řádků a
-sloupců). Nakonec by se tato třída použila pro vyřešení určité matematické úlohy (bude
-známý postup).
+Nedodělaná úloha :O, takže si ji udělejte prosím sami. Když uděláte PR, tak to rád mergnu.
 
+Zadání: [strana 4](https://maturita.panjohnny.me/ulohy/typove_ulohy.pdf#page=4).
+
+Text: [Matice](/ulohy/texty/Matice.pdf).
+
+Ztratil jsem energii po implementaci Vektorů a za týden z tohoto maturuju :)))
+
+Rozpracované řešení:
 ```csharp
 class Matrix
 {

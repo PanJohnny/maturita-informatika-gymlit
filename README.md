@@ -47,9 +47,7 @@ Praktická zkouška je hodina práce a 15 minut prezentace.
 - [Vlastní datový typ - vektory](/ulohy/csharp/vektory)
 - [Vlastní datový typ - matice](/ulohy/csharp/matice)
 - [Detekce kolizí základních 2D objektů](/ulohy/csharp/detekce-kolizi-zakladnich-2d-objektu)
-- Databáze v C#
-  - prakticky úloha na SQL
-  - bude nástroj pro přístup k DB a vy ukážete několik queries, které se dají použít pro práci s databází
+- [Databáze v C#](/ulohy/csharp/databaze)
 
 ### Pomocné texty
 - [Eulerova metoda](/ulohy/texty/Eulerova%20metoda.pdf)
