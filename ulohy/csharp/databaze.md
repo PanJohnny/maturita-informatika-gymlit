@@ -20,7 +20,7 @@ tedy object typu QueryResult a přehledně jej vykreslí do konzole jako tabulku
         for (int i = 0; i < queryResult.ColumnCount; i++)
         {
             string th = queryResult.ColumnNames[i] + ": " + queryResult.ColumnDataTypes[i].Name;
-            output += PadBoth(th, colW);
+            output += PadBoth(th, colW); // ukradnuto z https://stackoverflow.com/questions/17590528/pad-left-pad-right-pad-center-string#17590723
             output += separator;
         }
 
@@ -111,6 +111,7 @@ nova.NonQuery("""
                     FOREIGN KEY (id_autor) REFERENCES autor (id) ON DELETE CASCADE ON UPDATE CASCADE
                 );
                 """);
+
 ```
 
 Do nově vzniklé databáze vložte alespoň tři autory, přičemž každému autorovi
@@ -123,10 +124,7 @@ nova.NonQuery("""
                 INSERT INTO autor (jmeno, rok_narozeni) VALUES ('Daniel Abraham', 1969);
                 INSERT INTO autor (jmeno, rok_narozeni) VALUES ('Brandon Sanderson', 1975);
                 """);
-```
-
-
-```csharp
+                
 // Zjisti si ID autorů sám :D. Jsem línej to opakovat konstantně
 if (idTolkien != -1)
 {
@@ -165,6 +163,7 @@ konzole):
 - Tabulku, která bude obsahovat veškerá data z obou tabulek.
 - Tabulku ve tvaru (sloupce): jméno autora; počet knih náležících danému autorovi v knihovně.
 - Tabulku ve tvaru (sloupce): jméno autora; rok vydání jeho nejstaršího díla; rok vydání jeho nejnovějšího díla
+
 ```csharp
 // Vypiš všechny údaje z obou tabulek (autor + jeho knihy)
 PrintDataTable(nova.Query("""
