@@ -1,5 +1,7 @@
 # Aproximace ludolfova čísla
 
+Pomocný text: [Eulerova metoda](/ulohy/texty/Eulerova%20metoda.pdf)
+
 ## 1. Úkol
 
 Vytvořte celkem 2 funkce s jediným vstupním parametrem N, jejichž výstupem bude aproximace čísla π určená pomocí součtu prvních N prvků následujících posloupností:

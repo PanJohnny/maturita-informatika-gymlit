@@ -1,5 +1,7 @@
 # Výpočet obsahu plochy pod grafem funkce
 
+Pomocný text: [Integrál](/ulohy/texty/Integrál.pdf)
+
 **Pracovní úkoly:**
 1. Vytvořte funkci integral(f, a, b, n):
    - Vstupy:
