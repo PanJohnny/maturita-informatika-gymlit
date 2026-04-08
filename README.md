@@ -32,9 +32,10 @@ Na této stránce najdete materiály a zdroje, které vám pomohou připravit se
 Praktická zkouška je hodina práce a 15 minut prezentace.
 
 - [PDF zadání](/ulohy/typove_ulohy.pdf)
-- [Pomocné texty](#Pomocné%20texty)
+- [Pomocné texty](#pomocné-texty)
+- Řešení: [Honzovo](#honzovo-řešení-typových-úloh) a [Kaččino](https://github.com/kaculicinek/maturita2026)
 
-### Řešení typových úloh
+### Honzovo řešení typových úloh
 
 #### Úlohy HTML, CSS, JS
 Poznámka: dema fungují jen na PC kvůli specifickým eventům, kdyžtak se dá použít touchdown, ...
@@ -51,7 +52,7 @@ Následující 2 jsou udělány jinak než podle zadání, ale můžete ze z toh
 - [Vlastní datový typ - vektory](/ulohy/csharp/vektory)
 - [Vlastní datový typ - matice](/ulohy/csharp/matice) - nedodělané, ale můžete ze z toho odpíchnout
 - [Detekce kolizí základních 2D objektů](/ulohy/csharp/detekce-kolizi-zakladnich-2d-objektu)
-- [Databáze v C#](/ulohy/csharp/databaze)
+- [Databáze v C#](/ulohy/csharp/databaze)7
 
 ### Pomocné texty
 - [Eulerova metoda](/ulohy/texty/Eulerova%20metoda.pdf)
