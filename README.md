@@ -2,31 +2,36 @@
 Na této stránce najdete materiály a zdroje, které vám pomohou připravit se na maturitní zkoušku z informatiky a výpočetní techniky na Gymnáziu Litoměřická v Praze.
 
 ## Maturitní okruhy
-1. Informace a dvojková soustava
-2. Digitální reprezentace informací
-3. [Přenos informací](/okruhy/Přenos%20informací)
-4. [Historie a technologie výpočetní techniky](/okruhy/Historie%20a%20technologie%20výpočetní%20techniky)
-5. Základy číslicové techniky
-6. Počítač a jeho komponenty
-7. GPU a CPU
-8. Paměť
-9. [Periferní zařízení připojená k počítači](/okruhy/Periferní%20zařízení%20připojená%20k%20počítači)
-10. [Operační systémy](/okruhy/Operační%20systémy)
-11. Desktopové aplikace
-12. 2D počítačová grafika
-13. 3D počítačová grafika
-14. Multimédia
-15. [Počítačové sítě](/okruhy/Počítačové%20sítě)
-16. [Internet](/okruhy/Internet)
-17. [Webová aplikace](/okruhy/Webová%20aplikace)
-18. [Základy HTML, CSS a JS](okruhy/Základy%20HTML,%20CSS%20a%20JS)
-19. [Databáze](/okruhy/Databáze)
-20. [Základy SQL](/okruhy/Základy%20SQL)
-21. [Algoritmizace](/okruhy/Algoritmizace)
-22. [Programovací jazyky](/okruhy/Programovací%20jazyky)
-23. [Programovací jazyk C#](/okruhy/Programovací%20jazyk%20C%23)
-24. [Objektově orientované programování](/okruhy/Objektově%20orientované%20programování)
-25. Umělá inteligence
+1. Informace a dvojková soustava \[D]
+2. Digitální reprezentace informací \[D]
+3. [Přenos informací](/okruhy/Přenos%20informací) \[K]
+4. [Historie a technologie výpočetní techniky](/okruhy/Historie%20a%20technologie%20výpočetní%20techniky) \[K]
+5. Základy číslicové techniky \[D]
+6. Počítač a jeho komponenty \[D]
+7. GPU a CPU \[D]
+8. Paměť \[D]
+9. [Periferní zařízení připojená k počítači](/okruhy/Periferní%20zařízení%20připojená%20k%20počítači) \[K]
+10. [Operační systémy](/okruhy/Operační%20systémy) \[K]
+11. [Desktopové aplikace](/okruhy/Desktopové%20aplikace) \[K]
+12. 2D počítačová grafika \[K]
+13. 3D počítačová grafika \[K]
+14. [Multimédia](/okruhy/Multimédia) \[K]
+15. [Počítačové sítě](/okruhy/Počítačové%20sítě) \[H]
+16. [Internet](/okruhy/Internet) \[H]
+17. [Webová aplikace](/okruhy/Webová%20aplikace) \[H]
+18. [Základy HTML, CSS a JS](okruhy/Základy%20HTML,%20CSS%20a%20JS) \[H]
+19. [Databáze](/okruhy/Databáze) \[H]
+20. [Základy SQL](/okruhy/Základy%20SQL) \[H]
+21. [Algoritmizace](/okruhy/Algoritmizace) \[H]
+22. [Programovací jazyky](/okruhy/Programovací%20jazyky) \[H]
+23. [Programovací jazyk C#](/okruhy/Programovací%20jazyk%20C%23) \[H]
+24. [Objektově orientované programování](/okruhy/Objektově%20orientované%20programování) \[H]
+25. Umělá inteligence \[K]
+
+- **Autoři**:
+  - \[D\]vořák
+  - \[K\]ačka
+  - \[H\]onza
 
 ## Praktická zkouška
 Praktická zkouška je hodina práce a 15 minut prezentace.
