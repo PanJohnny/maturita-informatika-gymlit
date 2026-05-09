@@ -13,8 +13,8 @@ Na této stránce najdete materiály a zdroje, které vám pomohou připravit se
 9. [Periferní zařízení připojená k počítači](/okruhy/Periferní%20zařízení%20připojená%20k%20počítači) \[K]
 10. [Operační systémy](/okruhy/Operační%20systémy) \[K]
 11. [Desktopové aplikace](/okruhy/Desktopové%20aplikace) \[K]
-12. 2D počítačová grafika \[K]
-13. 3D počítačová grafika \[K]
+12. [2D počítačová grafika](/okruhy/2D%20grafika) \[K]
+13. [3D počítačová grafika](/okruhy/3D%20grafika) \[K]
 14. [Multimédia](/okruhy/Multimédia) \[K]
 15. [Počítačové sítě](/okruhy/Počítačové%20sítě) \[H]
 16. [Internet](/okruhy/Internet) \[H]
@@ -26,7 +26,7 @@ Na této stránce najdete materiály a zdroje, které vám pomohou připravit se
 22. [Programovací jazyky](/okruhy/Programovací%20jazyky) \[H]
 23. [Programovací jazyk C#](/okruhy/Programovací%20jazyk%20C%23) \[H]
 24. [Objektově orientované programování](/okruhy/Objektově%20orientované%20programování) \[H]
-25. Umělá inteligence \[K]
+25. [Umělá inteligence](/okruhy/Umělá%20inteligence) \[K]
 
 - **Autoři**:
   - \[D\]vořák
