@@ -6,7 +6,7 @@ Na této stránce najdete materiály a zdroje, které vám pomohou připravit se
 2. [Digitální reprezentace informací](/okruhy/Digitální%20reprezentace%20informací) \[K]
 3. [Přenos informací](/okruhy/Přenos%20informací) \[K]
 4. [Historie a technologie výpočetní techniky](/okruhy/Historie%20a%20technologie%20výpočetní%20techniky) \[K]
-5. Základy číslicové techniky \[D]
+5. [Základy číslicové techniky](/okruhy/Základy%20číslicové%20techniky) \[H]
 6. [Počítač a jeho komponenty](/okruhy/Počítač%20a%20jeho%20komponenty) \[K]
 7. [GPU a CPU](/okruhy/CPU%20a%20GPU) \[K]
 8. [Paměť](/okruhy/Paměť) \[H]
@@ -29,7 +29,6 @@ Na této stránce najdete materiály a zdroje, které vám pomohou připravit se
 25. [Umělá inteligence](/okruhy/Umělá%20inteligence) \[K]
 
 - **Autoři**:
-  - \[D\]vořák
   - \[K\]ačka
   - \[H\]onza
 

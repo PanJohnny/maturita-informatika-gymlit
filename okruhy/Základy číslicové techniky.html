@@ -1,0 +1,3157 @@
+---
+layout: default
+title: "Základy číslicové techniky"
+---
+
+<!-- z čistě technických důvodů tohle musí být html soubor, aby se zachovalo formátování -->
+<style type="text/css">
+    .lst-kix_5e339q69rqdz-0 > li:before {
+        content: "\0025cf   "
+    }
+
+    .lst-kix_5e339q69rqdz-1 > li:before {
+        content: "\0025cb   "
+    }
+
+    .lst-kix_xgpega8oz3gm-0 > li:before {
+        content: "\0025cf   "
+    }
+
+    .lst-kix_5e339q69rqdz-3 > li:before {
+        content: "\0025cf   "
+    }
+
+    ul.lst-kix_ah13tn6wgox8-8 {
+        list-style-type: none
+    }
+
+    ul.lst-kix_ah13tn6wgox8-7 {
+        list-style-type: none
+    }
+
+    .lst-kix_5e339q69rqdz-2 > li:before {
+        content: "\0025a0   "
+    }
+
+    ul.lst-kix_ah13tn6wgox8-6 {
+        list-style-type: none
+    }
+
+    ul.lst-kix_ah13tn6wgox8-5 {
+        list-style-type: none
+    }
+
+    ul.lst-kix_v1j4w7crqmdj-2 {
+        list-style-type: none
+    }
+
+    ul.lst-kix_ah13tn6wgox8-4 {
+        list-style-type: none
+    }
+
+    ul.lst-kix_v1j4w7crqmdj-1 {
+        list-style-type: none
+    }
+
+    ul.lst-kix_ah13tn6wgox8-3 {
+        list-style-type: none
+    }
+
+    ul.lst-kix_v1j4w7crqmdj-0 {
+        list-style-type: none
+    }
+
+    ul.lst-kix_ah13tn6wgox8-2 {
+        list-style-type: none
+    }
+
+    .lst-kix_xgpega8oz3gm-2 > li:before {
+        content: "\0025a0   "
+    }
+
+    .lst-kix_xgpega8oz3gm-4 > li:before {
+        content: "\0025cb   "
+    }
+
+    ul.lst-kix_ah13tn6wgox8-1 {
+        list-style-type: none
+    }
+
+    .lst-kix_lsish1ojnq48-8 > li:before {
+        content: "\0025a0   "
+    }
+
+    ul.lst-kix_ah13tn6wgox8-0 {
+        list-style-type: none
+    }
+
+    .lst-kix_xgpega8oz3gm-1 > li:before {
+        content: "\0025cb   "
+    }
+
+    .lst-kix_xgpega8oz3gm-5 > li:before {
+        content: "\0025a0   "
+    }
+
+    ul.lst-kix_v1j4w7crqmdj-8 {
+        list-style-type: none
+    }
+
+    ul.lst-kix_v1j4w7crqmdj-7 {
+        list-style-type: none
+    }
+
+    ul.lst-kix_v1j4w7crqmdj-6 {
+        list-style-type: none
+    }
+
+    ul.lst-kix_v1j4w7crqmdj-5 {
+        list-style-type: none
+    }
+
+    ul.lst-kix_v1j4w7crqmdj-4 {
+        list-style-type: none
+    }
+
+    .lst-kix_xgpega8oz3gm-3 > li:before {
+        content: "\0025cf   "
+    }
+
+    ul.lst-kix_v1j4w7crqmdj-3 {
+        list-style-type: none
+    }
+
+    .lst-kix_4cnfwuy5syq0-4 > li:before {
+        content: "\0025cb   "
+    }
+
+    .lst-kix_4cnfwuy5syq0-1 > li:before {
+        content: "\0025cb   "
+    }
+
+    .lst-kix_4cnfwuy5syq0-5 > li:before {
+        content: "\0025a0   "
+    }
+
+    .lst-kix_xgpega8oz3gm-6 > li:before {
+        content: "\0025cf   "
+    }
+
+    .lst-kix_xgpega8oz3gm-8 > li:before {
+        content: "\0025a0   "
+    }
+
+    .lst-kix_4cnfwuy5syq0-2 > li:before {
+        content: "\0025a0   "
+    }
+
+    .lst-kix_4cnfwuy5syq0-3 > li:before {
+        content: "\0025cf   "
+    }
+
+    .lst-kix_xgpega8oz3gm-7 > li:before {
+        content: "\0025cb   "
+    }
+
+    .lst-kix_5e339q69rqdz-5 > li:before {
+        content: "\0025a0   "
+    }
+
+    .lst-kix_5e339q69rqdz-4 > li:before {
+        content: "\0025cb   "
+    }
+
+    .lst-kix_5e339q69rqdz-8 > li:before {
+        content: "\0025a0   "
+    }
+
+    .lst-kix_4cnfwuy5syq0-0 > li:before {
+        content: "\0025cf   "
+    }
+
+    .lst-kix_5e339q69rqdz-7 > li:before {
+        content: "\0025cb   "
+    }
+
+    .lst-kix_5e339q69rqdz-6 > li:before {
+        content: "\0025cf   "
+    }
+
+    ul.lst-kix_4cnfwuy5syq0-5 {
+        list-style-type: none
+    }
+
+    ul.lst-kix_4cnfwuy5syq0-6 {
+        list-style-type: none
+    }
+
+    ul.lst-kix_4cnfwuy5syq0-3 {
+        list-style-type: none
+    }
+
+    ul.lst-kix_4cnfwuy5syq0-4 {
+        list-style-type: none
+    }
+
+    ul.lst-kix_4cnfwuy5syq0-7 {
+        list-style-type: none
+    }
+
+    ul.lst-kix_4cnfwuy5syq0-8 {
+        list-style-type: none
+    }
+
+    ul.lst-kix_uqiwc7bot5vj-0 {
+        list-style-type: none
+    }
+
+    ul.lst-kix_4cnfwuy5syq0-1 {
+        list-style-type: none
+    }
+
+    ul.lst-kix_4cnfwuy5syq0-2 {
+        list-style-type: none
+    }
+
+    ul.lst-kix_4cnfwuy5syq0-0 {
+        list-style-type: none
+    }
+
+    ul.lst-kix_8c3t7p7vfoqz-7 {
+        list-style-type: none
+    }
+
+    ul.lst-kix_7nkcpgc7u0vf-8 {
+        list-style-type: none
+    }
+
+    ul.lst-kix_8c3t7p7vfoqz-8 {
+        list-style-type: none
+    }
+
+    ul.lst-kix_8c3t7p7vfoqz-3 {
+        list-style-type: none
+    }
+
+    ul.lst-kix_7nkcpgc7u0vf-4 {
+        list-style-type: none
+    }
+
+    ul.lst-kix_8c3t7p7vfoqz-4 {
+        list-style-type: none
+    }
+
+    ul.lst-kix_7nkcpgc7u0vf-5 {
+        list-style-type: none
+    }
+
+    ul.lst-kix_8c3t7p7vfoqz-5 {
+        list-style-type: none
+    }
+
+    ul.lst-kix_7nkcpgc7u0vf-6 {
+        list-style-type: none
+    }
+
+    ul.lst-kix_8c3t7p7vfoqz-6 {
+        list-style-type: none
+    }
+
+    ul.lst-kix_7nkcpgc7u0vf-7 {
+        list-style-type: none
+    }
+
+    ul.lst-kix_7nkcpgc7u0vf-0 {
+        list-style-type: none
+    }
+
+    .lst-kix_4cnfwuy5syq0-8 > li:before {
+        content: "\0025a0   "
+    }
+
+    .lst-kix_w2650yg5qh-8 > li:before {
+        content: "\0025a0   "
+    }
+
+    ul.lst-kix_8c3t7p7vfoqz-0 {
+        list-style-type: none
+    }
+
+    ul.lst-kix_7nkcpgc7u0vf-1 {
+        list-style-type: none
+    }
+
+    ul.lst-kix_8c3t7p7vfoqz-1 {
+        list-style-type: none
+    }
+
+    ul.lst-kix_7nkcpgc7u0vf-2 {
+        list-style-type: none
+    }
+
+    ul.lst-kix_8c3t7p7vfoqz-2 {
+        list-style-type: none
+    }
+
+    ul.lst-kix_7nkcpgc7u0vf-3 {
+        list-style-type: none
+    }
+
+    .lst-kix_4cnfwuy5syq0-6 > li:before {
+        content: "\0025cf   "
+    }
+
+    .lst-kix_4cnfwuy5syq0-7 > li:before {
+        content: "\0025cb   "
+    }
+
+    .lst-kix_lsish1ojnq48-2 > li:before {
+        content: "\0025a0   "
+    }
+
+    .lst-kix_7nkcpgc7u0vf-2 > li:before {
+        content: "\0025a0   "
+    }
+
+    .lst-kix_7nkcpgc7u0vf-3 > li:before {
+        content: "\0025cf   "
+    }
+
+    .lst-kix_lsish1ojnq48-0 > li:before {
+        content: "\0025cf   "
+    }
+
+    .lst-kix_lsish1ojnq48-4 > li:before {
+        content: "\0025cb   "
+    }
+
+    .lst-kix_7nkcpgc7u0vf-0 > li:before {
+        content: "\0025cf   "
+    }
+
+    .lst-kix_7nkcpgc7u0vf-1 > li:before {
+        content: "\0025cb   "
+    }
+
+    .lst-kix_7nkcpgc7u0vf-4 > li:before {
+        content: "\0025cb   "
+    }
+
+    .lst-kix_7nkcpgc7u0vf-5 > li:before {
+        content: "\0025a0   "
+    }
+
+    .lst-kix_lsish1ojnq48-1 > li:before {
+        content: "\0025cb   "
+    }
+
+    .lst-kix_lsish1ojnq48-5 > li:before {
+        content: "\0025a0   "
+    }
+
+    .lst-kix_lsish1ojnq48-6 > li:before {
+        content: "\0025cf   "
+    }
+
+    .lst-kix_w2650yg5qh-7 > li:before {
+        content: "\0025cb   "
+    }
+
+    ul.lst-kix_cbqqdlnb22a2-6 {
+        list-style-type: none
+    }
+
+    .lst-kix_w2650yg5qh-5 > li:before {
+        content: "\0025a0   "
+    }
+
+    .lst-kix_w2650yg5qh-6 > li:before {
+        content: "\0025cf   "
+    }
+
+    ul.lst-kix_cbqqdlnb22a2-5 {
+        list-style-type: none
+    }
+
+    ul.lst-kix_cbqqdlnb22a2-8 {
+        list-style-type: none
+    }
+
+    .lst-kix_lsish1ojnq48-7 > li:before {
+        content: "\0025cb   "
+    }
+
+    ul.lst-kix_cbqqdlnb22a2-7 {
+        list-style-type: none
+    }
+
+    ul.lst-kix_cbqqdlnb22a2-2 {
+        list-style-type: none
+    }
+
+    ul.lst-kix_uqiwc7bot5vj-5 {
+        list-style-type: none
+    }
+
+    .lst-kix_w2650yg5qh-3 > li:before {
+        content: "\0025cf   "
+    }
+
+    .lst-kix_w2650yg5qh-4 > li:before {
+        content: "\0025cb   "
+    }
+
+    ul.lst-kix_cbqqdlnb22a2-1 {
+        list-style-type: none
+    }
+
+    ul.lst-kix_uqiwc7bot5vj-6 {
+        list-style-type: none
+    }
+
+    ul.lst-kix_cbqqdlnb22a2-4 {
+        list-style-type: none
+    }
+
+    ul.lst-kix_uqiwc7bot5vj-7 {
+        list-style-type: none
+    }
+
+    ul.lst-kix_cbqqdlnb22a2-3 {
+        list-style-type: none
+    }
+
+    ul.lst-kix_uqiwc7bot5vj-8 {
+        list-style-type: none
+    }
+
+    ul.lst-kix_uqiwc7bot5vj-1 {
+        list-style-type: none
+    }
+
+    ul.lst-kix_uqiwc7bot5vj-2 {
+        list-style-type: none
+    }
+
+    ul.lst-kix_cbqqdlnb22a2-0 {
+        list-style-type: none
+    }
+
+    ul.lst-kix_uqiwc7bot5vj-3 {
+        list-style-type: none
+    }
+
+    ul.lst-kix_uqiwc7bot5vj-4 {
+        list-style-type: none
+    }
+
+    .lst-kix_w2650yg5qh-0 > li:before {
+        content: "\0025cf   "
+    }
+
+    .lst-kix_w2650yg5qh-1 > li:before {
+        content: "\0025cb   "
+    }
+
+    .lst-kix_w2650yg5qh-2 > li:before {
+        content: "\0025a0   "
+    }
+
+    .lst-kix_lsish1ojnq48-3 > li:before {
+        content: "\0025cf   "
+    }
+
+    .lst-kix_7iifhn7vp99a-7 > li:before {
+        content: "\0025cb   "
+    }
+
+    .lst-kix_67tu2xf59a7i-4 > li:before {
+        content: "\0025cb   "
+    }
+
+    .lst-kix_67tu2xf59a7i-8 > li:before {
+        content: "\0025a0   "
+    }
+
+    .lst-kix_v1j4w7crqmdj-2 > li:before {
+        content: "\0025a0   "
+    }
+
+    .lst-kix_7iifhn7vp99a-5 > li:before {
+        content: "\0025a0   "
+    }
+
+    .lst-kix_67tu2xf59a7i-6 > li:before {
+        content: "\0025cf   "
+    }
+
+    .lst-kix_v1j4w7crqmdj-0 > li:before {
+        content: "\0025cf   "
+    }
+
+    ul.lst-kix_5e339q69rqdz-3 {
+        list-style-type: none
+    }
+
+    .lst-kix_7iifhn7vp99a-1 > li:before {
+        content: "\0025cb   "
+    }
+
+    .lst-kix_v1j4w7crqmdj-6 > li:before {
+        content: "\0025cf   "
+    }
+
+    ul.lst-kix_5e339q69rqdz-4 {
+        list-style-type: none
+    }
+
+    .lst-kix_29ol2lvs46lb-1 > li:before {
+        content: "\0025cb   "
+    }
+
+    .lst-kix_4uvua0hxc2sv-1 > li:before {
+        content: "\0025cb   "
+    }
+
+    .lst-kix_srlbymg9uks3-1 > li:before {
+        content: "\0025cb   "
+    }
+
+    ul.lst-kix_5e339q69rqdz-1 {
+        list-style-type: none
+    }
+
+    .lst-kix_uqiwc7bot5vj-3 > li:before {
+        content: "\0025cf   "
+    }
+
+    .lst-kix_uqiwc7bot5vj-5 > li:before {
+        content: "\0025a0   "
+    }
+
+    ul.lst-kix_5e339q69rqdz-2 {
+        list-style-type: none
+    }
+
+    ul.lst-kix_5e339q69rqdz-7 {
+        list-style-type: none
+    }
+
+    .lst-kix_7iifhn7vp99a-3 > li:before {
+        content: "\0025cf   "
+    }
+
+    ul.lst-kix_5e339q69rqdz-8 {
+        list-style-type: none
+    }
+
+    .lst-kix_7nkcpgc7u0vf-8 > li:before {
+        content: "\0025a0   "
+    }
+
+    .lst-kix_y79k48m8e993-1 > li:before {
+        content: "\0025cb   "
+    }
+
+    ul.lst-kix_5e339q69rqdz-5 {
+        list-style-type: none
+    }
+
+    ul.lst-kix_5e339q69rqdz-6 {
+        list-style-type: none
+    }
+
+    .lst-kix_4uvua0hxc2sv-5 > li:before {
+        content: "\0025a0   "
+    }
+
+    .lst-kix_7nkcpgc7u0vf-6 > li:before {
+        content: "\0025cf   "
+    }
+
+    .lst-kix_uqiwc7bot5vj-7 > li:before {
+        content: "\0025cb   "
+    }
+
+    .lst-kix_h99iabqiuzou-7 > li:before {
+        content: "\0025cb   "
+    }
+
+    .lst-kix_29ol2lvs46lb-3 > li:before {
+        content: "\0025cf   "
+    }
+
+    .lst-kix_4uvua0hxc2sv-3 > li:before {
+        content: "\0025cf   "
+    }
+
+    .lst-kix_srlbymg9uks3-3 > li:before {
+        content: "\0025cf   "
+    }
+
+    .lst-kix_v1j4w7crqmdj-4 > li:before {
+        content: "\0025cb   "
+    }
+
+    .lst-kix_srlbymg9uks3-5 > li:before {
+        content: "\0025a0   "
+    }
+
+    .lst-kix_29ol2lvs46lb-5 > li:before {
+        content: "\0025a0   "
+    }
+
+    .lst-kix_uqiwc7bot5vj-1 > li:before {
+        content: "\0025cb   "
+    }
+
+    .lst-kix_29ol2lvs46lb-7 > li:before {
+        content: "\0025cb   "
+    }
+
+    .lst-kix_4uvua0hxc2sv-7 > li:before {
+        content: "\0025cb   "
+    }
+
+    .lst-kix_8c3t7p7vfoqz-7 > li:before {
+        content: "\0025cb   "
+    }
+
+    .lst-kix_srlbymg9uks3-7 > li:before {
+        content: "\0025cb   "
+    }
+
+    .lst-kix_y79k48m8e993-3 > li:before {
+        content: "\0025cf   "
+    }
+
+    .lst-kix_y79k48m8e993-5 > li:before {
+        content: "\0025a0   "
+    }
+
+    .lst-kix_67tu2xf59a7i-0 > li:before {
+        content: "\0025cf   "
+    }
+
+    .lst-kix_y79k48m8e993-7 > li:before {
+        content: "\0025cb   "
+    }
+
+    .lst-kix_67tu2xf59a7i-2 > li:before {
+        content: "\0025a0   "
+    }
+
+    ul.lst-kix_h99iabqiuzou-8 {
+        list-style-type: none
+    }
+
+    ul.lst-kix_h99iabqiuzou-5 {
+        list-style-type: none
+    }
+
+    ul.lst-kix_h99iabqiuzou-4 {
+        list-style-type: none
+    }
+
+    ul.lst-kix_h99iabqiuzou-7 {
+        list-style-type: none
+    }
+
+    .lst-kix_ewkilxa6utg7-4 > li:before {
+        content: "\0025cb   "
+    }
+
+    .lst-kix_ewkilxa6utg7-8 > li:before {
+        content: "\0025a0   "
+    }
+
+    ul.lst-kix_h99iabqiuzou-6 {
+        list-style-type: none
+    }
+
+    ul.lst-kix_h99iabqiuzou-1 {
+        list-style-type: none
+    }
+
+    ul.lst-kix_h99iabqiuzou-0 {
+        list-style-type: none
+    }
+
+    ul.lst-kix_h99iabqiuzou-3 {
+        list-style-type: none
+    }
+
+    ul.lst-kix_h99iabqiuzou-2 {
+        list-style-type: none
+    }
+
+    .lst-kix_ewkilxa6utg7-6 > li:before {
+        content: "\0025cf   "
+    }
+
+    .lst-kix_ah13tn6wgox8-3 > li:before {
+        content: "\0025cf   "
+    }
+
+    ul.lst-kix_srlbymg9uks3-8 {
+        list-style-type: none
+    }
+
+    .lst-kix_ewkilxa6utg7-0 > li:before {
+        content: "\0025cf   "
+    }
+
+    ul.lst-kix_srlbymg9uks3-6 {
+        list-style-type: none
+    }
+
+    ul.lst-kix_srlbymg9uks3-7 {
+        list-style-type: none
+    }
+
+    ul.lst-kix_srlbymg9uks3-4 {
+        list-style-type: none
+    }
+
+    .lst-kix_ah13tn6wgox8-1 > li:before {
+        content: "\0025cb   "
+    }
+
+    ul.lst-kix_srlbymg9uks3-5 {
+        list-style-type: none
+    }
+
+    ul.lst-kix_srlbymg9uks3-2 {
+        list-style-type: none
+    }
+
+    ul.lst-kix_srlbymg9uks3-3 {
+        list-style-type: none
+    }
+
+    ul.lst-kix_ewkilxa6utg7-0 {
+        list-style-type: none
+    }
+
+    ul.lst-kix_srlbymg9uks3-0 {
+        list-style-type: none
+    }
+
+    .lst-kix_ewkilxa6utg7-2 > li:before {
+        content: "\0025a0   "
+    }
+
+    ul.lst-kix_srlbymg9uks3-1 {
+        list-style-type: none
+    }
+
+    ul.lst-kix_29ol2lvs46lb-4 {
+        list-style-type: none
+    }
+
+    .lst-kix_h99iabqiuzou-5 > li:before {
+        content: "\0025a0   "
+    }
+
+    ul.lst-kix_29ol2lvs46lb-5 {
+        list-style-type: none
+    }
+
+    ul.lst-kix_29ol2lvs46lb-2 {
+        list-style-type: none
+    }
+
+    ul.lst-kix_29ol2lvs46lb-3 {
+        list-style-type: none
+    }
+
+    ul.lst-kix_29ol2lvs46lb-0 {
+        list-style-type: none
+    }
+
+    ul.lst-kix_29ol2lvs46lb-1 {
+        list-style-type: none
+    }
+
+    ul.lst-kix_29ol2lvs46lb-8 {
+        list-style-type: none
+    }
+
+    .lst-kix_h99iabqiuzou-3 > li:before {
+        content: "\0025cf   "
+    }
+
+    ul.lst-kix_5e339q69rqdz-0 {
+        list-style-type: none
+    }
+
+    ul.lst-kix_29ol2lvs46lb-6 {
+        list-style-type: none
+    }
+
+    ul.lst-kix_29ol2lvs46lb-7 {
+        list-style-type: none
+    }
+
+    .lst-kix_ah13tn6wgox8-5 > li:before {
+        content: "\0025a0   "
+    }
+
+    .lst-kix_h99iabqiuzou-1 > li:before {
+        content: "\0025cb   "
+    }
+
+    .lst-kix_ah13tn6wgox8-7 > li:before {
+        content: "\0025cb   "
+    }
+
+    ul.lst-kix_y79k48m8e993-8 {
+        list-style-type: none
+    }
+
+    ul.lst-kix_y79k48m8e993-7 {
+        list-style-type: none
+    }
+
+    ul.lst-kix_y79k48m8e993-6 {
+        list-style-type: none
+    }
+
+    ul.lst-kix_y79k48m8e993-5 {
+        list-style-type: none
+    }
+
+    ul.lst-kix_y79k48m8e993-4 {
+        list-style-type: none
+    }
+
+    .lst-kix_s96vmbkw97o6-4 > li:before {
+        content: "\0025cb   "
+    }
+
+    .lst-kix_s96vmbkw97o6-5 > li:before {
+        content: "\0025a0   "
+    }
+
+    ul.lst-kix_y79k48m8e993-3 {
+        list-style-type: none
+    }
+
+    .lst-kix_s96vmbkw97o6-6 > li:before {
+        content: "\0025cf   "
+    }
+
+    ul.lst-kix_y79k48m8e993-2 {
+        list-style-type: none
+    }
+
+    .lst-kix_cbqqdlnb22a2-4 > li:before {
+        content: "\0025cb   "
+    }
+
+    ul.lst-kix_y79k48m8e993-1 {
+        list-style-type: none
+    }
+
+    ul.lst-kix_y79k48m8e993-0 {
+        list-style-type: none
+    }
+
+    .lst-kix_cbqqdlnb22a2-5 > li:before {
+        content: "\0025a0   "
+    }
+
+    .lst-kix_s96vmbkw97o6-7 > li:before {
+        content: "\0025cb   "
+    }
+
+    ul.lst-kix_ewkilxa6utg7-2 {
+        list-style-type: none
+    }
+
+    ul.lst-kix_ewkilxa6utg7-1 {
+        list-style-type: none
+    }
+
+    ul.lst-kix_ewkilxa6utg7-4 {
+        list-style-type: none
+    }
+
+    ul.lst-kix_ewkilxa6utg7-3 {
+        list-style-type: none
+    }
+
+    ul.lst-kix_ewkilxa6utg7-6 {
+        list-style-type: none
+    }
+
+    ul.lst-kix_ewkilxa6utg7-5 {
+        list-style-type: none
+    }
+
+    ul.lst-kix_ewkilxa6utg7-8 {
+        list-style-type: none
+    }
+
+    ul.lst-kix_ewkilxa6utg7-7 {
+        list-style-type: none
+    }
+
+    .lst-kix_cbqqdlnb22a2-3 > li:before {
+        content: "\0025cf   "
+    }
+
+    .lst-kix_cbqqdlnb22a2-2 > li:before {
+        content: "\0025a0   "
+    }
+
+    .lst-kix_cbqqdlnb22a2-1 > li:before {
+        content: "\0025cb   "
+    }
+
+    .lst-kix_s96vmbkw97o6-3 > li:before {
+        content: "\0025cf   "
+    }
+
+    .lst-kix_s96vmbkw97o6-2 > li:before {
+        content: "\0025a0   "
+    }
+
+    .lst-kix_cbqqdlnb22a2-0 > li:before {
+        content: "\0025cf   "
+    }
+
+    .lst-kix_s96vmbkw97o6-1 > li:before {
+        content: "\0025cb   "
+    }
+
+    .lst-kix_s96vmbkw97o6-0 > li:before {
+        content: "\0025cf   "
+    }
+
+    ul.lst-kix_s96vmbkw97o6-0 {
+        list-style-type: none
+    }
+
+    ul.lst-kix_s96vmbkw97o6-4 {
+        list-style-type: none
+    }
+
+    ul.lst-kix_s96vmbkw97o6-3 {
+        list-style-type: none
+    }
+
+    ul.lst-kix_s96vmbkw97o6-2 {
+        list-style-type: none
+    }
+
+    ul.lst-kix_s96vmbkw97o6-1 {
+        list-style-type: none
+    }
+
+    .lst-kix_8c3t7p7vfoqz-0 > li:before {
+        content: "\0025cf   "
+    }
+
+    .lst-kix_8c3t7p7vfoqz-4 > li:before {
+        content: "\0025cb   "
+    }
+
+    .lst-kix_8c3t7p7vfoqz-1 > li:before {
+        content: "\0025cb   "
+    }
+
+    .lst-kix_8c3t7p7vfoqz-5 > li:before {
+        content: "\0025a0   "
+    }
+
+    ul.lst-kix_s96vmbkw97o6-8 {
+        list-style-type: none
+    }
+
+    ul.lst-kix_s96vmbkw97o6-7 {
+        list-style-type: none
+    }
+
+    ul.lst-kix_s96vmbkw97o6-6 {
+        list-style-type: none
+    }
+
+    ul.lst-kix_s96vmbkw97o6-5 {
+        list-style-type: none
+    }
+
+    .lst-kix_8c3t7p7vfoqz-2 > li:before {
+        content: "\0025a0   "
+    }
+
+    .lst-kix_8c3t7p7vfoqz-3 > li:before {
+        content: "\0025cf   "
+    }
+
+    .lst-kix_cbqqdlnb22a2-7 > li:before {
+        content: "\0025cb   "
+    }
+
+    .lst-kix_cbqqdlnb22a2-6 > li:before {
+        content: "\0025cf   "
+    }
+
+    .lst-kix_cbqqdlnb22a2-8 > li:before {
+        content: "\0025a0   "
+    }
+
+    ul.lst-kix_xgpega8oz3gm-8 {
+        list-style-type: none
+    }
+
+    .lst-kix_s96vmbkw97o6-8 > li:before {
+        content: "\0025a0   "
+    }
+
+    ul.lst-kix_xgpega8oz3gm-7 {
+        list-style-type: none
+    }
+
+    ul.lst-kix_xgpega8oz3gm-6 {
+        list-style-type: none
+    }
+
+    ul.lst-kix_xgpega8oz3gm-5 {
+        list-style-type: none
+    }
+
+    ul.lst-kix_xgpega8oz3gm-4 {
+        list-style-type: none
+    }
+
+    ul.lst-kix_xgpega8oz3gm-3 {
+        list-style-type: none
+    }
+
+    ul.lst-kix_xgpega8oz3gm-2 {
+        list-style-type: none
+    }
+
+    ul.lst-kix_xgpega8oz3gm-1 {
+        list-style-type: none
+    }
+
+    ul.lst-kix_xgpega8oz3gm-0 {
+        list-style-type: none
+    }
+
+    .lst-kix_v1j4w7crqmdj-8 > li:before {
+        content: "\0025a0   "
+    }
+
+    .lst-kix_67tu2xf59a7i-5 > li:before {
+        content: "\0025a0   "
+    }
+
+    .lst-kix_67tu2xf59a7i-7 > li:before {
+        content: "\0025cb   "
+    }
+
+    .lst-kix_y79k48m8e993-8 > li:before {
+        content: "\0025a0   "
+    }
+
+    .lst-kix_7iifhn7vp99a-8 > li:before {
+        content: "\0025a0   "
+    }
+
+    .lst-kix_uqiwc7bot5vj-8 > li:before {
+        content: "\0025a0   "
+    }
+
+    .lst-kix_v1j4w7crqmdj-1 > li:before {
+        content: "\0025cb   "
+    }
+
+    .lst-kix_7iifhn7vp99a-6 > li:before {
+        content: "\0025cf   "
+    }
+
+    .lst-kix_uqiwc7bot5vj-4 > li:before {
+        content: "\0025cb   "
+    }
+
+    .lst-kix_29ol2lvs46lb-0 > li:before {
+        content: "\0025cf   "
+    }
+
+    .lst-kix_4uvua0hxc2sv-0 > li:before {
+        content: "\0025cf   "
+    }
+
+    .lst-kix_y79k48m8e993-2 > li:before {
+        content: "\0025a0   "
+    }
+
+    .lst-kix_srlbymg9uks3-0 > li:before {
+        content: "\0025cf   "
+    }
+
+    .lst-kix_v1j4w7crqmdj-7 > li:before {
+        content: "\0025cb   "
+    }
+
+    .lst-kix_v1j4w7crqmdj-5 > li:before {
+        content: "\0025a0   "
+    }
+
+    .lst-kix_4uvua0hxc2sv-2 > li:before {
+        content: "\0025a0   "
+    }
+
+    .lst-kix_y79k48m8e993-0 > li:before {
+        content: "\0025cf   "
+    }
+
+    .lst-kix_srlbymg9uks3-2 > li:before {
+        content: "\0025a0   "
+    }
+
+    .lst-kix_7iifhn7vp99a-0 > li:before {
+        content: "\0025cf   "
+    }
+
+    .lst-kix_7iifhn7vp99a-4 > li:before {
+        content: "\0025cb   "
+    }
+
+    .lst-kix_29ol2lvs46lb-4 > li:before {
+        content: "\0025cb   "
+    }
+
+    .lst-kix_4uvua0hxc2sv-4 > li:before {
+        content: "\0025cb   "
+    }
+
+    .lst-kix_7nkcpgc7u0vf-7 > li:before {
+        content: "\0025cb   "
+    }
+
+    .lst-kix_srlbymg9uks3-4 > li:before {
+        content: "\0025cb   "
+    }
+
+    .lst-kix_v1j4w7crqmdj-3 > li:before {
+        content: "\0025cf   "
+    }
+
+    .lst-kix_uqiwc7bot5vj-6 > li:before {
+        content: "\0025cf   "
+    }
+
+    .lst-kix_29ol2lvs46lb-2 > li:before {
+        content: "\0025a0   "
+    }
+
+    .lst-kix_7iifhn7vp99a-2 > li:before {
+        content: "\0025a0   "
+    }
+
+    .lst-kix_h99iabqiuzou-8 > li:before {
+        content: "\0025a0   "
+    }
+
+    .lst-kix_srlbymg9uks3-8 > li:before {
+        content: "\0025a0   "
+    }
+
+    .lst-kix_29ol2lvs46lb-8 > li:before {
+        content: "\0025a0   "
+    }
+
+    .lst-kix_4uvua0hxc2sv-8 > li:before {
+        content: "\0025a0   "
+    }
+
+    .lst-kix_srlbymg9uks3-6 > li:before {
+        content: "\0025cf   "
+    }
+
+    .lst-kix_4uvua0hxc2sv-6 > li:before {
+        content: "\0025cf   "
+    }
+
+    .lst-kix_8c3t7p7vfoqz-8 > li:before {
+        content: "\0025a0   "
+    }
+
+    .lst-kix_uqiwc7bot5vj-0 > li:before {
+        content: "\0025cf   "
+    }
+
+    .lst-kix_8c3t7p7vfoqz-6 > li:before {
+        content: "\0025cf   "
+    }
+
+    .lst-kix_uqiwc7bot5vj-2 > li:before {
+        content: "\0025a0   "
+    }
+
+    .lst-kix_29ol2lvs46lb-6 > li:before {
+        content: "\0025cf   "
+    }
+
+    ul.lst-kix_w2650yg5qh-2 {
+        list-style-type: none
+    }
+
+    ul.lst-kix_7iifhn7vp99a-7 {
+        list-style-type: none
+    }
+
+    ul.lst-kix_lsish1ojnq48-7 {
+        list-style-type: none
+    }
+
+    ul.lst-kix_w2650yg5qh-1 {
+        list-style-type: none
+    }
+
+    ul.lst-kix_7iifhn7vp99a-6 {
+        list-style-type: none
+    }
+
+    ul.lst-kix_lsish1ojnq48-8 {
+        list-style-type: none
+    }
+
+    ul.lst-kix_w2650yg5qh-4 {
+        list-style-type: none
+    }
+
+    ul.lst-kix_7iifhn7vp99a-5 {
+        list-style-type: none
+    }
+
+    ul.lst-kix_lsish1ojnq48-5 {
+        list-style-type: none
+    }
+
+    ul.lst-kix_w2650yg5qh-3 {
+        list-style-type: none
+    }
+
+    ul.lst-kix_7iifhn7vp99a-4 {
+        list-style-type: none
+    }
+
+    ul.lst-kix_lsish1ojnq48-6 {
+        list-style-type: none
+    }
+
+    ul.lst-kix_w2650yg5qh-6 {
+        list-style-type: none
+    }
+
+    ul.lst-kix_4uvua0hxc2sv-8 {
+        list-style-type: none
+    }
+
+    ul.lst-kix_w2650yg5qh-5 {
+        list-style-type: none
+    }
+
+    .lst-kix_y79k48m8e993-4 > li:before {
+        content: "\0025cb   "
+    }
+
+    ul.lst-kix_w2650yg5qh-8 {
+        list-style-type: none
+    }
+
+    ul.lst-kix_w2650yg5qh-7 {
+        list-style-type: none
+    }
+
+    ul.lst-kix_7iifhn7vp99a-8 {
+        list-style-type: none
+    }
+
+    ul.lst-kix_4uvua0hxc2sv-4 {
+        list-style-type: none
+    }
+
+    ul.lst-kix_4uvua0hxc2sv-5 {
+        list-style-type: none
+    }
+
+    .lst-kix_y79k48m8e993-6 > li:before {
+        content: "\0025cf   "
+    }
+
+    ul.lst-kix_4uvua0hxc2sv-6 {
+        list-style-type: none
+    }
+
+    ul.lst-kix_4uvua0hxc2sv-7 {
+        list-style-type: none
+    }
+
+    .lst-kix_67tu2xf59a7i-1 > li:before {
+        content: "\0025cb   "
+    }
+
+    .lst-kix_67tu2xf59a7i-3 > li:before {
+        content: "\0025cf   "
+    }
+
+    ul.lst-kix_4uvua0hxc2sv-0 {
+        list-style-type: none
+    }
+
+    ul.lst-kix_7iifhn7vp99a-3 {
+        list-style-type: none
+    }
+
+    ul.lst-kix_4uvua0hxc2sv-1 {
+        list-style-type: none
+    }
+
+    ul.lst-kix_7iifhn7vp99a-2 {
+        list-style-type: none
+    }
+
+    ul.lst-kix_w2650yg5qh-0 {
+        list-style-type: none
+    }
+
+    ul.lst-kix_4uvua0hxc2sv-2 {
+        list-style-type: none
+    }
+
+    ul.lst-kix_7iifhn7vp99a-1 {
+        list-style-type: none
+    }
+
+    ul.lst-kix_4uvua0hxc2sv-3 {
+        list-style-type: none
+    }
+
+    ul.lst-kix_7iifhn7vp99a-0 {
+        list-style-type: none
+    }
+
+    .lst-kix_ewkilxa6utg7-3 > li:before {
+        content: "\0025cf   "
+    }
+
+    .lst-kix_ewkilxa6utg7-5 > li:before {
+        content: "\0025a0   "
+    }
+
+    ul.lst-kix_lsish1ojnq48-0 {
+        list-style-type: none
+    }
+
+    .lst-kix_ewkilxa6utg7-7 > li:before {
+        content: "\0025cb   "
+    }
+
+    ul.lst-kix_lsish1ojnq48-3 {
+        list-style-type: none
+    }
+
+    ul.lst-kix_lsish1ojnq48-4 {
+        list-style-type: none
+    }
+
+    ul.lst-kix_lsish1ojnq48-1 {
+        list-style-type: none
+    }
+
+    ul.lst-kix_lsish1ojnq48-2 {
+        list-style-type: none
+    }
+
+    .lst-kix_ah13tn6wgox8-2 > li:before {
+        content: "\0025a0   "
+    }
+
+    .lst-kix_ah13tn6wgox8-0 > li:before {
+        content: "\0025cf   "
+    }
+
+    .lst-kix_ewkilxa6utg7-1 > li:before {
+        content: "\0025cb   "
+    }
+
+    ul.lst-kix_67tu2xf59a7i-7 {
+        list-style-type: none
+    }
+
+    ul.lst-kix_67tu2xf59a7i-6 {
+        list-style-type: none
+    }
+
+    ul.lst-kix_67tu2xf59a7i-5 {
+        list-style-type: none
+    }
+
+    ul.lst-kix_67tu2xf59a7i-4 {
+        list-style-type: none
+    }
+
+    ul.lst-kix_67tu2xf59a7i-3 {
+        list-style-type: none
+    }
+
+    ul.lst-kix_67tu2xf59a7i-2 {
+        list-style-type: none
+    }
+
+    ul.lst-kix_67tu2xf59a7i-1 {
+        list-style-type: none
+    }
+
+    .lst-kix_h99iabqiuzou-2 > li:before {
+        content: "\0025a0   "
+    }
+
+    .lst-kix_h99iabqiuzou-6 > li:before {
+        content: "\0025cf   "
+    }
+
+    ul.lst-kix_67tu2xf59a7i-0 {
+        list-style-type: none
+    }
+
+    li.li-bullet-0:before {
+        margin-left: -18pt;
+        white-space: nowrap;
+        display: inline-block;
+        min-width: 18pt
+    }
+
+    .lst-kix_h99iabqiuzou-4 > li:before {
+        content: "\0025cb   "
+    }
+
+    ul.lst-kix_67tu2xf59a7i-8 {
+        list-style-type: none
+    }
+
+    .lst-kix_ah13tn6wgox8-4 > li:before {
+        content: "\0025cb   "
+    }
+
+    .lst-kix_ah13tn6wgox8-6 > li:before {
+        content: "\0025cf   "
+    }
+
+    .lst-kix_ah13tn6wgox8-8 > li:before {
+        content: "\0025a0   "
+    }
+
+    .lst-kix_h99iabqiuzou-0 > li:before {
+        content: "\0025cf   "
+    }
+
+    ol {
+        margin: 0;
+        padding: 0
+    }
+
+    table td, table th {
+        padding: 0
+    }
+
+    .c45 {
+        border-right-style: solid;
+        padding: 5pt 5pt 5pt 5pt;
+        border-bottom-color: #000000;
+        border-top-width: 1.5pt;
+        border-right-width: 1pt;
+        border-left-color: #000000;
+        vertical-align: top;
+        border-right-color: #000000;
+        border-left-width: 1pt;
+        border-top-style: solid;
+        background-color: #d9d9d9;
+        border-left-style: solid;
+        border-bottom-width: 1pt;
+        width: 42pt;
+        border-top-color: #000000;
+        border-bottom-style: solid
+    }
+
+    .c17 {
+        border-right-style: solid;
+        padding: 5pt 5pt 5pt 5pt;
+        border-bottom-color: #000000;
+        border-top-width: 1pt;
+        border-right-width: 1.5pt;
+        border-left-color: #000000;
+        vertical-align: top;
+        border-right-color: #000000;
+        border-left-width: 1pt;
+        border-top-style: solid;
+        background-color: #d9d9d9;
+        border-left-style: solid;
+        border-bottom-width: 1pt;
+        width: 44.2pt;
+        border-top-color: #000000;
+        border-bottom-style: solid
+    }
+
+    .c32 {
+        border-right-style: solid;
+        padding: 5pt 5pt 5pt 5pt;
+        border-bottom-color: #000000;
+        border-top-width: 1pt;
+        border-right-width: 1pt;
+        border-left-color: #000000;
+        vertical-align: top;
+        border-right-color: #000000;
+        border-left-width: 1pt;
+        border-top-style: solid;
+        background-color: #b7b7b7;
+        border-left-style: solid;
+        border-bottom-width: 1.5pt;
+        width: 66.8pt;
+        border-top-color: #000000;
+        border-bottom-style: solid
+    }
+
+    .c65 {
+        border-right-style: solid;
+        padding: 5pt 5pt 5pt 5pt;
+        border-bottom-color: #000000;
+        border-top-width: 1pt;
+        border-right-width: 1pt;
+        border-left-color: #000000;
+        vertical-align: top;
+        border-right-color: #000000;
+        border-left-width: 1pt;
+        border-top-style: solid;
+        background-color: #b7b7b7;
+        border-left-style: solid;
+        border-bottom-width: 1.5pt;
+        width: 42pt;
+        border-top-color: #000000;
+        border-bottom-style: solid
+    }
+
+    .c46 {
+        border-right-style: solid;
+        padding: 5pt 5pt 5pt 5pt;
+        border-bottom-color: #000000;
+        border-top-width: 1pt;
+        border-right-width: 1pt;
+        border-left-color: #000000;
+        vertical-align: top;
+        border-right-color: #000000;
+        border-left-width: 1pt;
+        border-top-style: solid;
+        background-color: #b7b7b7;
+        border-left-style: solid;
+        border-bottom-width: 1.5pt;
+        width: 64.5pt;
+        border-top-color: #000000;
+        border-bottom-style: solid
+    }
+
+    .c27 {
+        border-right-style: solid;
+        padding: 5pt 5pt 5pt 5pt;
+        border-bottom-color: #000000;
+        border-top-width: 1pt;
+        border-right-width: 1pt;
+        border-left-color: #000000;
+        vertical-align: top;
+        border-right-color: #000000;
+        border-left-width: 1pt;
+        border-top-style: solid;
+        background-color: #d9d9d9;
+        border-left-style: solid;
+        border-bottom-width: 1pt;
+        width: 42pt;
+        border-top-color: #000000;
+        border-bottom-style: solid
+    }
+
+    .c12 {
+        border-right-style: solid;
+        padding: 5pt 5pt 5pt 5pt;
+        border-bottom-color: #000000;
+        border-top-width: 1.5pt;
+        border-right-width: 1.5pt;
+        border-left-color: #000000;
+        vertical-align: top;
+        border-right-color: #000000;
+        border-left-width: 1pt;
+        border-top-style: solid;
+        background-color: #d9d9d9;
+        border-left-style: solid;
+        border-bottom-width: 1pt;
+        width: 44.2pt;
+        border-top-color: #000000;
+        border-bottom-style: solid
+    }
+
+    .c63 {
+        border-right-style: solid;
+        padding: 5pt 5pt 5pt 5pt;
+        border-bottom-color: #000000;
+        border-top-width: 1pt;
+        border-right-width: 1.5pt;
+        border-left-color: #000000;
+        vertical-align: top;
+        border-right-color: #000000;
+        border-left-width: 1pt;
+        border-top-style: solid;
+        background-color: #b7b7b7;
+        border-left-style: solid;
+        border-bottom-width: 1.5pt;
+        width: 44.2pt;
+        border-top-color: #000000;
+        border-bottom-style: solid
+    }
+
+    .c40 {
+        border-right-style: solid;
+        padding: 5pt 5pt 5pt 5pt;
+        border-bottom-color: #000000;
+        border-top-width: 1pt;
+        border-right-width: 1pt;
+        border-left-color: #000000;
+        vertical-align: top;
+        border-right-color: #000000;
+        border-left-width: 1.5pt;
+        border-top-style: solid;
+        background-color: #b7b7b7;
+        border-left-style: solid;
+        border-bottom-width: 1.5pt;
+        width: 68.2pt;
+        border-top-color: #000000;
+        border-bottom-style: solid
+    }
+
+    .c57 {
+        border-right-style: solid;
+        padding: 5pt 5pt 5pt 5pt;
+        border-bottom-color: #000000;
+        border-top-width: 1pt;
+        border-right-width: 1pt;
+        border-left-color: #000000;
+        vertical-align: top;
+        border-right-color: #000000;
+        border-left-width: 1pt;
+        border-top-style: solid;
+        border-left-style: solid;
+        border-bottom-width: 1pt;
+        width: 66.8pt;
+        border-top-color: #000000;
+        border-bottom-style: solid
+    }
+
+    .c10 {
+        border-right-style: solid;
+        padding: 5pt 5pt 5pt 5pt;
+        border-bottom-color: #000000;
+        border-top-width: 1pt;
+        border-right-width: 0pt;
+        border-left-color: #000000;
+        vertical-align: top;
+        border-right-color: #000000;
+        border-left-width: 1pt;
+        border-top-style: solid;
+        border-left-style: solid;
+        border-bottom-width: 1pt;
+        width: 103.5pt;
+        border-top-color: #000000;
+        border-bottom-style: solid
+    }
+
+    .c22 {
+        border-right-style: solid;
+        padding: 5pt 5pt 5pt 5pt;
+        border-bottom-color: #000000;
+        border-top-width: 1pt;
+        border-right-width: 1pt;
+        border-left-color: #000000;
+        vertical-align: top;
+        border-right-color: #000000;
+        border-left-width: 1.5pt;
+        border-top-style: solid;
+        border-left-style: solid;
+        border-bottom-width: 1pt;
+        width: 68.2pt;
+        border-top-color: #000000;
+        border-bottom-style: solid
+    }
+
+    .c37 {
+        border-right-style: solid;
+        padding: 5pt 5pt 5pt 5pt;
+        border-bottom-color: #000000;
+        border-top-width: 1pt;
+        border-right-width: 1pt;
+        border-left-color: #000000;
+        vertical-align: top;
+        border-right-color: #000000;
+        border-left-width: 1pt;
+        border-top-style: solid;
+        border-left-style: solid;
+        border-bottom-width: 1pt;
+        width: 24.2pt;
+        border-top-color: #000000;
+        border-bottom-style: solid
+    }
+
+    .c61 {
+        border-right-style: solid;
+        padding: 5pt 5pt 5pt 5pt;
+        border-bottom-color: #000000;
+        border-top-width: 1pt;
+        border-right-width: 0pt;
+        border-left-color: #000000;
+        vertical-align: top;
+        border-right-color: #000000;
+        border-left-width: 1pt;
+        border-top-style: solid;
+        border-left-style: solid;
+        border-bottom-width: 1pt;
+        width: 53.2pt;
+        border-top-color: #000000;
+        border-bottom-style: solid
+    }
+
+    .c39 {
+        border-right-style: solid;
+        padding: 5pt 5pt 5pt 5pt;
+        border-bottom-color: #000000;
+        border-top-width: 1pt;
+        border-right-width: 1pt;
+        border-left-color: #000000;
+        vertical-align: top;
+        border-right-color: #000000;
+        border-left-width: 1pt;
+        border-top-style: solid;
+        border-left-style: solid;
+        border-bottom-width: 1pt;
+        width: 36.2pt;
+        border-top-color: #000000;
+        border-bottom-style: solid
+    }
+
+    .c38 {
+        border-right-style: solid;
+        padding: 5pt 5pt 5pt 5pt;
+        border-bottom-color: #000000;
+        border-top-width: 1pt;
+        border-right-width: 1pt;
+        border-left-color: #000000;
+        vertical-align: top;
+        border-right-color: #000000;
+        border-left-width: 1pt;
+        border-top-style: solid;
+        border-left-style: solid;
+        border-bottom-width: 1pt;
+        width: 22.8pt;
+        border-top-color: #000000;
+        border-bottom-style: solid
+    }
+
+    .c18 {
+        border-right-style: solid;
+        padding: 5pt 5pt 5pt 5pt;
+        border-bottom-color: #000000;
+        border-top-width: 1pt;
+        border-right-width: 1pt;
+        border-left-color: #000000;
+        vertical-align: top;
+        border-right-color: #000000;
+        border-left-width: 1pt;
+        border-top-style: solid;
+        border-left-style: solid;
+        border-bottom-width: 1pt;
+        width: 20.5pt;
+        border-top-color: #000000;
+        border-bottom-style: solid
+    }
+
+    .c23 {
+        border-right-style: solid;
+        padding: 5pt 5pt 5pt 5pt;
+        border-bottom-color: #000000;
+        border-top-width: 1pt;
+        border-right-width: 1pt;
+        border-left-color: #000000;
+        vertical-align: top;
+        border-right-color: #000000;
+        border-left-width: 1pt;
+        border-top-style: solid;
+        border-left-style: solid;
+        border-bottom-width: 1pt;
+        width: 28.5pt;
+        border-top-color: #000000;
+        border-bottom-style: solid
+    }
+
+    .c34 {
+        border-right-style: solid;
+        padding: 5pt 5pt 5pt 5pt;
+        border-bottom-color: #000000;
+        border-top-width: 1pt;
+        border-right-width: 1pt;
+        border-left-color: #000000;
+        vertical-align: top;
+        border-right-color: #000000;
+        border-left-width: 1pt;
+        border-top-style: solid;
+        border-left-style: solid;
+        border-bottom-width: 1pt;
+        width: 25.5pt;
+        border-top-color: #000000;
+        border-bottom-style: solid
+    }
+
+    .c19 {
+        border-right-style: solid;
+        padding: 5pt 5pt 5pt 5pt;
+        border-bottom-color: #000000;
+        border-top-width: 1pt;
+        border-right-width: 1pt;
+        border-left-color: #000000;
+        vertical-align: top;
+        border-right-color: #000000;
+        border-left-width: 1pt;
+        border-top-style: solid;
+        border-left-style: solid;
+        border-bottom-width: 1pt;
+        width: 31.5pt;
+        border-top-color: #000000;
+        border-bottom-style: solid
+    }
+
+    .c48 {
+        border-right-style: solid;
+        padding: 5pt 5pt 5pt 5pt;
+        border-bottom-color: #000000;
+        border-top-width: 1pt;
+        border-right-width: 1pt;
+        border-left-color: #000000;
+        vertical-align: top;
+        border-right-color: #000000;
+        border-left-width: 0pt;
+        border-top-style: solid;
+        border-left-style: solid;
+        border-bottom-width: 1pt;
+        width: 28.5pt;
+        border-top-color: #000000;
+        border-bottom-style: solid
+    }
+
+    .c60 {
+        border-right-style: solid;
+        padding: 5pt 5pt 5pt 5pt;
+        border-bottom-color: #000000;
+        border-top-width: 1pt;
+        border-right-width: 1pt;
+        border-left-color: #000000;
+        vertical-align: top;
+        border-right-color: #000000;
+        border-left-width: 0pt;
+        border-top-style: solid;
+        border-left-style: solid;
+        border-bottom-width: 1pt;
+        width: 25.5pt;
+        border-top-color: #000000;
+        border-bottom-style: solid
+    }
+
+    .c8 {
+        border-right-style: solid;
+        padding: 5pt 5pt 5pt 5pt;
+        border-bottom-color: #000000;
+        border-top-width: 1pt;
+        border-right-width: 1pt;
+        border-left-color: #000000;
+        vertical-align: top;
+        border-right-color: #000000;
+        border-left-width: 1pt;
+        border-top-style: solid;
+        border-left-style: solid;
+        border-bottom-width: 1pt;
+        width: 64.5pt;
+        border-top-color: #000000;
+        border-bottom-style: solid
+    }
+
+    .c64 {
+        border-right-style: solid;
+        padding: 5pt 5pt 5pt 5pt;
+        border-bottom-color: #000000;
+        border-top-width: 1pt;
+        border-right-width: 1pt;
+        border-left-color: #000000;
+        vertical-align: top;
+        border-right-color: #000000;
+        border-left-width: 1pt;
+        border-top-style: solid;
+        border-left-style: solid;
+        border-bottom-width: 1pt;
+        width: 63pt;
+        border-top-color: #000000;
+        border-bottom-style: solid
+    }
+
+    .c41 {
+        border-right-style: solid;
+        padding: 5pt 5pt 5pt 5pt;
+        border-bottom-color: #000000;
+        border-top-width: 1pt;
+        border-right-width: 1pt;
+        border-left-color: #000000;
+        vertical-align: top;
+        border-right-color: #000000;
+        border-left-width: 1pt;
+        border-top-style: solid;
+        border-left-style: solid;
+        border-bottom-width: 1pt;
+        width: 60.5pt;
+        border-top-color: #000000;
+        border-bottom-style: solid
+    }
+
+    .c55 {
+        border-right-style: solid;
+        padding: 5pt 5pt 5pt 5pt;
+        border-bottom-color: #000000;
+        border-top-width: 1.5pt;
+        border-right-width: 1pt;
+        border-left-color: #000000;
+        vertical-align: top;
+        border-right-color: #000000;
+        border-left-width: 1.5pt;
+        border-top-style: solid;
+        border-left-style: solid;
+        border-bottom-width: 1pt;
+        width: 68.2pt;
+        border-top-color: #000000;
+        border-bottom-style: solid
+    }
+
+    .c43 {
+        border-right-style: solid;
+        padding: 5pt 5pt 5pt 5pt;
+        border-bottom-color: #000000;
+        border-top-width: 1.5pt;
+        border-right-width: 1pt;
+        border-left-color: #000000;
+        vertical-align: top;
+        border-right-color: #000000;
+        border-left-width: 1pt;
+        border-top-style: solid;
+        border-left-style: solid;
+        border-bottom-width: 1pt;
+        width: 64.5pt;
+        border-top-color: #000000;
+        border-bottom-style: solid
+    }
+
+    .c29 {
+        border-right-style: solid;
+        padding: 5pt 5pt 5pt 5pt;
+        border-bottom-color: #000000;
+        border-top-width: 1pt;
+        border-right-width: 1pt;
+        border-left-color: #000000;
+        vertical-align: top;
+        border-right-color: #000000;
+        border-left-width: 1pt;
+        border-top-style: solid;
+        border-left-style: solid;
+        border-bottom-width: 1pt;
+        width: 43.5pt;
+        border-top-color: #000000;
+        border-bottom-style: solid
+    }
+
+    .c50 {
+        border-right-style: solid;
+        padding: 5pt 5pt 5pt 5pt;
+        border-bottom-color: #000000;
+        border-top-width: 1.5pt;
+        border-right-width: 1pt;
+        border-left-color: #000000;
+        vertical-align: top;
+        border-right-color: #000000;
+        border-left-width: 1pt;
+        border-top-style: solid;
+        border-left-style: solid;
+        border-bottom-width: 1pt;
+        width: 66.8pt;
+        border-top-color: #000000;
+        border-bottom-style: solid
+    }
+
+    .c1 {
+        border-right-style: solid;
+        padding: 5pt 5pt 5pt 5pt;
+        border-bottom-color: #000000;
+        border-top-width: 1pt;
+        border-right-width: 1pt;
+        border-left-color: #000000;
+        vertical-align: top;
+        border-right-color: #000000;
+        border-left-width: 1pt;
+        border-top-style: solid;
+        border-left-style: solid;
+        border-bottom-width: 1pt;
+        width: 19.8pt;
+        border-top-color: #000000;
+        border-bottom-style: solid
+    }
+
+    .c24 {
+        border-right-style: solid;
+        padding: 5pt 5pt 5pt 5pt;
+        border-bottom-color: #000000;
+        border-top-width: 0pt;
+        border-right-width: 0pt;
+        border-left-color: #000000;
+        vertical-align: top;
+        border-right-color: #000000;
+        border-left-width: 0pt;
+        border-top-style: solid;
+        border-left-style: solid;
+        border-bottom-width: 0pt;
+        width: 225.7pt;
+        border-top-color: #000000;
+        border-bottom-style: solid
+    }
+
+    .c47 {
+        border-right-style: solid;
+        padding: 5pt 5pt 5pt 5pt;
+        border-bottom-color: #000000;
+        border-top-width: 1pt;
+        border-right-width: 1pt;
+        border-left-color: #000000;
+        vertical-align: top;
+        border-right-color: #000000;
+        border-left-width: 1pt;
+        border-top-style: solid;
+        border-left-style: solid;
+        border-bottom-width: 1pt;
+        width: 27.8pt;
+        border-top-color: #000000;
+        border-bottom-style: solid
+    }
+
+    .c33 {
+        padding-top: 4pt;
+        padding-bottom: 4pt;
+        line-height: 1.15;
+        page-break-after: avoid;
+        orphans: 2;
+        widows: 2;
+        text-align: left
+    }
+
+    .c13 {
+        color: #000000;
+        font-weight: 700;
+        text-decoration: none;
+        vertical-align: baseline;
+        font-size: 11pt;
+        font-family: "Arial";
+        font-style: normal
+    }
+
+    .c14 {
+        color: #434343;
+        font-weight: 400;
+        text-decoration: none;
+        vertical-align: baseline;
+        font-size: 14pt;
+        font-family: "Arial";
+        font-style: normal
+    }
+
+    .c52 {
+        padding-top: 20pt;
+        padding-bottom: 6pt;
+        line-height: 1.15;
+        page-break-after: avoid;
+        orphans: 2;
+        widows: 2;
+        text-align: left
+    }
+
+    .c49 {
+        color: #000000;
+        font-weight: 400;
+        text-decoration: none;
+        vertical-align: baseline;
+        font-size: 16pt;
+        font-family: "Arial";
+        font-style: normal
+    }
+
+    .c6 {
+        color: #000000;
+        font-weight: 400;
+        text-decoration: none;
+        vertical-align: baseline;
+        font-size: 11pt;
+        font-family: "Arial";
+        font-style: normal
+    }
+
+    .c36 {
+        padding-top: 18pt;
+        padding-bottom: 6pt;
+        line-height: 1.15;
+        page-break-after: avoid;
+        orphans: 2;
+        widows: 2;
+        text-align: left
+    }
+
+    .c59 {
+        color: #000000;
+        font-weight: 400;
+        text-decoration: none;
+        vertical-align: baseline;
+        font-size: 20pt;
+        font-family: "Arial";
+        font-style: normal
+    }
+
+    .c2 {
+        padding-top: 0pt;
+        padding-bottom: 0pt;
+        line-height: 1.15;
+        orphans: 2;
+        widows: 2;
+        text-align: left
+    }
+
+    .c28 {
+        padding-top: 0pt;
+        padding-bottom: 11pt;
+        line-height: 1.35;
+        orphans: 2;
+        widows: 2;
+        text-align: left
+    }
+
+    .c53 {
+        padding-top: 0pt;
+        padding-bottom: 0pt;
+        line-height: 1.35;
+        orphans: 2;
+        widows: 2;
+        text-align: left
+    }
+
+    .c62 {
+        padding-top: 0pt;
+        padding-bottom: 0pt;
+        line-height: 1.0;
+        orphans: 2;
+        widows: 2;
+        text-align: center
+    }
+
+    .c44 {
+        padding-top: 0pt;
+        padding-bottom: 0pt;
+        line-height: 1.15;
+        orphans: 2;
+        widows: 2;
+        text-align: center
+    }
+
+    .c7 {
+        padding-top: 0pt;
+        padding-bottom: 0pt;
+        line-height: 1.0;
+        orphans: 2;
+        widows: 2;
+        text-align: left
+    }
+
+    .c11 {
+        padding-top: 4pt;
+        padding-bottom: 4pt;
+        line-height: 1.0;
+        page-break-after: avoid;
+        text-align: left
+    }
+
+    .c35 {
+        font-weight: 400;
+        vertical-align: baseline;
+        font-size: 11pt;
+        font-family: "Arial";
+        font-style: normal
+    }
+
+    .c25 {
+        border-spacing: 0;
+        border-collapse: collapse;
+        margin-right: auto
+    }
+
+    .c20 {
+        text-decoration-skip-ink: none;
+        -webkit-text-decoration-skip: none;
+        color: #1155cc;
+        text-decoration: underline
+    }
+
+    .c16 {
+        padding-top: 0pt;
+        padding-bottom: 0pt;
+        line-height: 1.0;
+        text-align: left
+    }
+
+    .c58 {
+        background-color: #ffffff;
+        max-width: 451.4pt;
+        padding: 72pt 72pt 72pt 72pt
+    }
+
+    .c0 {
+        padding: 0;
+        margin: 0
+    }
+
+    .c4 {
+        margin-left: 36pt;
+        padding-left: 0pt
+    }
+
+    .c15 {
+        color: inherit;
+        text-decoration: inherit
+    }
+
+    .c5 {
+        margin-left: 108pt;
+        padding-left: 0pt
+    }
+
+    .c9 {
+        margin-left: 72pt;
+        padding-left: 0pt
+    }
+
+    .c42 {
+        vertical-align: sub;
+        font-weight: 700
+    }
+
+    .c51 {
+        margin-left: 144pt;
+        padding-left: 0pt
+    }
+
+    .c31 {
+        margin-left: 180pt;
+        padding-left: 0pt
+    }
+
+    .c26 {
+        height: 0pt
+    }
+
+    .c54 {
+        font-weight: 700
+    }
+
+    .c66 {
+        height: 29.5pt
+    }
+
+    .c56 {
+        vertical-align: sub
+    }
+
+    .c3 {
+        font-style: italic
+    }
+
+    .c21 {
+        height: 11pt
+    }
+
+    .c30 {
+        height: 28pt
+    }
+
+    .title {
+        padding-top: 0pt;
+        color: #000000;
+        font-size: 26pt;
+        padding-bottom: 3pt;
+        font-family: "Arial";
+        line-height: 1.15;
+        page-break-after: avoid;
+        orphans: 2;
+        widows: 2;
+        text-align: left
+    }
+
+    .subtitle {
+        padding-top: 0pt;
+        color: #666666;
+        font-size: 15pt;
+        padding-bottom: 16pt;
+        font-family: "Arial";
+        line-height: 1.15;
+        page-break-after: avoid;
+        orphans: 2;
+        widows: 2;
+        text-align: left
+    }
+
+    li {
+        color: #000000;
+        font-size: 11pt;
+        font-family: "Arial"
+    }
+
+    p {
+        margin: 0;
+        color: #000000;
+        font-size: 11pt;
+        font-family: "Arial"
+    }
+
+    h1 {
+        padding-top: 20pt;
+        color: #000000;
+        font-size: 20pt;
+        padding-bottom: 6pt;
+        font-family: "Arial";
+        line-height: 1.15;
+        page-break-after: avoid;
+        orphans: 2;
+        widows: 2;
+        text-align: left
+    }
+
+    h2 {
+        padding-top: 18pt;
+        color: #000000;
+        font-size: 16pt;
+        padding-bottom: 6pt;
+        font-family: "Arial";
+        line-height: 1.15;
+        page-break-after: avoid;
+        orphans: 2;
+        widows: 2;
+        text-align: left
+    }
+
+    h3 {
+        padding-top: 4pt;
+        color: #434343;
+        font-size: 14pt;
+        padding-bottom: 4pt;
+        font-family: "Arial";
+        line-height: 1.15;
+        page-break-after: avoid;
+        orphans: 2;
+        widows: 2;
+        text-align: left
+    }
+
+    h4 {
+        padding-top: 14pt;
+        color: #666666;
+        font-size: 12pt;
+        padding-bottom: 4pt;
+        font-family: "Arial";
+        line-height: 1.15;
+        page-break-after: avoid;
+        orphans: 2;
+        widows: 2;
+        text-align: left
+    }
+
+    h5 {
+        padding-top: 12pt;
+        color: #666666;
+        font-size: 11pt;
+        padding-bottom: 4pt;
+        font-family: "Arial";
+        line-height: 1.15;
+        page-break-after: avoid;
+        orphans: 2;
+        widows: 2;
+        text-align: left
+    }
+
+    h6 {
+        padding-top: 12pt;
+        color: #666666;
+        font-size: 11pt;
+        padding-bottom: 4pt;
+        font-family: "Arial";
+        line-height: 1.15;
+        page-break-after: avoid;
+        font-style: italic;
+        orphans: 2;
+        widows: 2;
+        text-align: left
+    }</style>
+<main class="c58 doc-content">
+    <h1 class="c52" id="h.lpctctvcqysf"><span class="c59">Z&aacute;klady &#269;&iacute;slicov&eacute; techniky</span>
+    </h1>
+    <ul class="c0 lst-kix_ewkilxa6utg7-0 start">
+        <li class="c2 c4 li-bullet-0"><span class="c6">co to je</span></li>
+        <li class="c2 c4 li-bullet-0"><span class="c6">logick&eacute; operace</span></li>
+    </ul>
+    <ul class="c0 lst-kix_ewkilxa6utg7-1 start">
+        <li class="c2 c9 li-bullet-0"><span class="c6">negace</span></li>
+        <li class="c2 c9 li-bullet-0"><span class="c6">konjunkce</span></li>
+        <li class="c2 c9 li-bullet-0"><span class="c6">disjunkce</span></li>
+        <li class="c2 c9 li-bullet-0"><span class="c6">implikace</span></li>
+        <li class="c2 c9 li-bullet-0"><span class="c6">ekvivalence</span></li>
+    </ul>
+    <ul class="c0 lst-kix_ewkilxa6utg7-0">
+        <li class="c2 c4 li-bullet-0"><span class="c6">z&aacute;kladn&iacute; logick&eacute; &#269;leny</span></li>
+    </ul>
+    <ul class="c0 lst-kix_ewkilxa6utg7-1 start">
+        <li class="c2 c9 li-bullet-0"><span class="c6">opakova&#269;</span></li>
+        <li class="c2 c9 li-bullet-0"><span class="c6">NOT</span></li>
+        <li class="c2 c9 li-bullet-0"><span class="c6">AND</span></li>
+        <li class="c2 c9 li-bullet-0"><span class="c6">OR</span></li>
+        <li class="c2 c9 li-bullet-0"><span class="c6">NAND</span></li>
+        <li class="c2 c9 li-bullet-0"><span class="c6">NOR</span></li>
+        <li class="c2 c9 li-bullet-0"><span class="c6">XOR</span></li>
+        <li class="c2 c9 li-bullet-0"><span class="c6">XNOR</span></li>
+    </ul>
+    <ul class="c0 lst-kix_ewkilxa6utg7-0">
+        <li class="c2 c4 li-bullet-0"><span class="c6">logick&eacute; obvody</span></li>
+        <li class="c2 c4 li-bullet-0"><span class="c6">bonus: vnit&#345;nosti logick&yacute;ch &#269;len&#367;</span>
+        </li>
+    </ul>
+    <hr style="page-break-before:always;display:none;">
+    <p class="c2 c21"><span class="c6"></span></p>
+    <h2 class="c36" id="h.un2ynj8f4pte"><span class="c49">Co to je</span></h2>
+    <ul class="c0 lst-kix_4uvua0hxc2sv-0 start">
+        <li class="c2 c4 li-bullet-0"><span class="c6">obor zab&yacute;vaj&iacute;c&iacute; se za&#345;&iacute;zen&iacute;mi, kter&aacute; zpracov&aacute;vaj&iacute; diskr&eacute;tn&iacute; nespojit&eacute; sign&aacute;ly</span>
+        </li>
+    </ul>
+    <ul class="c0 lst-kix_4uvua0hxc2sv-1 start">
+        <li class="c2 c9 li-bullet-0"><span class="c6">nej&#269;ast&#283;ji bin&aacute;rn&iacute; data</span></li>
+        <li class="c2 c9 li-bullet-0"><span class="c6">&#269;&iacute;slicov&yacute; amp&eacute;rmetr prov&aacute;d&iacute; m&#283;&#345;en&iacute; a ukazuje &#269;&iacute;slo</span>
+        </li>
+    </ul>
+    <ul class="c0 lst-kix_4uvua0hxc2sv-2 start">
+        <li class="c2 c5 li-bullet-0"><span class="c6">nehroz&iacute; lidsk&aacute; chyba p&#345;i ode&#269;tu jako u ru&#269;i&#269;ky</span>
+        </li>
+        <li class="c2 c5 li-bullet-0"><span class="c6">m&#367;&#382;e t&#345;eba p&#345;ev&aacute;d&#283;t jednotky, data ukl&aacute;dat a d&aacute;l s nimi pracovat</span>
+        </li>
+        <li class="c2 c5 li-bullet-0"><span
+                class="c6">&rarr; p&#345;esn&#283;j&scaron;&iacute; m&#283;&#345;en&iacute;</span></li>
+    </ul>
+    <ul class="c0 lst-kix_4uvua0hxc2sv-1">
+        <li class="c2 c9 li-bullet-0"><span class="c6">analogov&eacute; sign&aacute;ly se mus&iacute; p&#345;ev&aacute;d&#283;t na &#269;&iacute;slicov&eacute; sign&aacute;ly</span>
+        </li>
+    </ul>
+    <ul class="c0 lst-kix_4uvua0hxc2sv-2 start">
+        <li class="c2 c5 li-bullet-0"><span class="c6">analogov&yacute; obvod zpracuje sign&aacute;l</span></li>
+        <li class="c2 c5 li-bullet-0"><span class="c6">analogov&#283;-&#269;&iacute;slicov&yacute; p&#345;evodn&iacute;k p&#345;evede do &#269;&iacute;slicov&eacute;ho sign&aacute;lu</span>
+        </li>
+    </ul>
+    <ul class="c0 lst-kix_4uvua0hxc2sv-3 start">
+        <li class="c2 c51 li-bullet-0"><span
+                class="c6">mus&iacute; b&yacute;t dostate&#269;n&yacute; po&#269;et bit&#367;</span></li>
+    </ul>
+    <ul class="c0 lst-kix_4uvua0hxc2sv-2">
+        <li class="c2 c5 li-bullet-0"><span class="c6">&#269;&iacute;slicov&eacute; obvody zpracuj&iacute; &#269;&iacute;slicov&yacute; sign&aacute;l</span>
+        </li>
+    </ul>
+    <ul class="c0 lst-kix_4uvua0hxc2sv-0">
+        <li class="c2 c4 li-bullet-0"><span class="c6">vs analogov&aacute; technika zpracov&aacute;v&aacute; data spojit&#283;</span>
+        </li>
+    </ul>
+    <ul class="c0 lst-kix_4uvua0hxc2sv-1 start">
+        <li class="c2 c9 li-bullet-0"><span class="c6">sign&aacute;l se b&#283;hem m&#283;&#345;en&iacute; m&#283;n&iacute; v &#269;ase (teplota, proud, &hellip;)</span>
+        </li>
+        <li class="c2 c9 li-bullet-0"><span class="c6">ru&#269;i&#269;ka amp&eacute;rmetru ukazuje v danou vte&#345;inu aktu&aacute;ln&iacute; proud</span>
+        </li>
+    </ul>
+    <ul class="c0 lst-kix_4uvua0hxc2sv-2 start">
+        <li class="c2 c5 li-bullet-0"><span class="c6">to je na stupnici</span></li>
+        <li class="c2 c5 li-bullet-0"><span class="c6">ka&#382;d&yacute; pozorovatel m&#367;&#382;e ode&#269;&iacute;st jinou hodnotu &ndash; ud&#283;lat chybu</span>
+        </li>
+    </ul>
+    <ul class="c0 lst-kix_4uvua0hxc2sv-1">
+        <li class="c2 c9 li-bullet-0"><span class="c6">analogov&eacute; veli&#269;iny &ndash; spojit&aacute; funkce &#269;asu</span>
+        </li>
+    </ul>
+    <ul class="c0 lst-kix_4uvua0hxc2sv-2 start">
+        <li class="c2 c5 li-bullet-0"><span class="c6">veli&#269;ina m&#283;n&iacute; hodnotu s &#269;asem / z&#367;st&aacute;v&aacute; konstantn&iacute;</span>
+        </li>
+    </ul>
+    <ul class="c0 lst-kix_4uvua0hxc2sv-0">
+        <li class="c2 c4 li-bullet-0"><span class="c6">&#269;&iacute;slicov&yacute; sign&aacute;l</span></li>
+    </ul>
+    <ul class="c0 lst-kix_4uvua0hxc2sv-1 start">
+        <li class="c2 c9 li-bullet-0"><span
+                class="c6">ozna&#269;ov&aacute;n jako dvojkov&yacute; (bin&aacute;rn&iacute;)</span></li>
+    </ul>
+    <ul class="c0 lst-kix_4uvua0hxc2sv-2 start">
+        <li class="c2 c5 li-bullet-0"><span class="c6">matematika: 1 / 0</span></li>
+        <li class="c2 c5 li-bullet-0"><span class="c6">logika: pravda / nepravda</span></li>
+        <li class="c2 c5 li-bullet-0"><span class="c6">elektrotechnika: r&#367;zn&eacute; nap&#283;t&iacute; proti spole&#269;n&eacute; zemi</span>
+        </li>
+    </ul>
+    <ul class="c0 lst-kix_4uvua0hxc2sv-3 start">
+        <li class="c2 c51 li-bullet-0"><span class="c6">nap&#345;. 0 je 0V / 1 je 5V</span></li>
+        <li class="c2 c51 li-bullet-0"><span class="c6">pokud je</span></li>
+    </ul>
+    <ul class="c0 lst-kix_4uvua0hxc2sv-4 start">
+        <li class="c2 c31 li-bullet-0"><span class="c6">stav 1 reprezentov&aacute;n vy&scaron;&scaron;&iacute;m nap&#283;t&iacute;m (H)</span>
+        </li>
+        <li class="c2 c31 li-bullet-0"><span class="c6">a stav 0 reprezentov&aacute;n ni&#382;&scaron;&iacute;m nap&#283;t&iacute;m (L)</span>
+        </li>
+        <li class="c2 c31 li-bullet-0"><span class="c6">tak se jedn&aacute; o pozitivn&iacute; logiku</span></li>
+    </ul>
+    <ul class="c0 lst-kix_4uvua0hxc2sv-3">
+        <li class="c2 c51 li-bullet-0"><span class="c6">pokud je</span></li>
+    </ul>
+    <ul class="c0 lst-kix_4uvua0hxc2sv-4 start">
+        <li class="c2 c31 li-bullet-0"><span class="c6">stav 1 reprezentov&aacute;n ni&#382;&scaron;&iacute;m nap&#283;t&iacute;m</span>
+        </li>
+        <li class="c2 c31 li-bullet-0"><span class="c6">tak se jedn&aacute; o negativn&iacute; logiku</span></li>
+    </ul>
+    <ul class="c0 lst-kix_4uvua0hxc2sv-1">
+        <li class="c2 c9 li-bullet-0"><span class="c6">jeden bit = 2 stavy</span></li>
+    </ul>
+    <ul class="c0 lst-kix_4uvua0hxc2sv-2 start">
+        <li class="c2 c5 li-bullet-0"><span class="c6">m&#367;&#382;eme vyj&aacute;d&#345;it jen jestli je n&#283;co pravda / nepravda</span>
+        </li>
+    </ul>
+    <ul class="c0 lst-kix_4uvua0hxc2sv-0">
+        <li class="c2 c4 li-bullet-0"><span class="c6">pokud pot&#345;ebujeme v&iacute;c stav&#367; mus&iacute;me m&iacute;t v&iacute;c bit&#367;</span>
+        </li>
+    </ul>
+    <ul class="c0 lst-kix_4uvua0hxc2sv-1 start">
+        <li class="c2 c9 li-bullet-0"><span class="c6">mo&#382;n&yacute;ch stav&#367; p&#345;ib&yacute;v&aacute; exponenci&aacute;ln&#283; v z&aacute;vislosti na po&#269;tu bit&#367;</span>
+        </li>
+    </ul>
+    <ul class="c0 lst-kix_4uvua0hxc2sv-2 start">
+        <li class="c2 c5 li-bullet-0"><img
+                src="/assets/cislice/image1.png">
+        </li>
+    </ul>
+    <ul class="c0 lst-kix_4uvua0hxc2sv-0">
+        <li class="c2 c4 li-bullet-0"><span class="c6">Booleaova algebra</span></li>
+    </ul>
+    <ul class="c0 lst-kix_4uvua0hxc2sv-1 start">
+        <li class="c2 c9 li-bullet-0"><span class="c6">matematick&yacute; syst&eacute;m zab&yacute;vaj&iacute;c&iacute; se logick&yacute;mi operacemi</span>
+        </li>
+        <li class="c2 c9 li-bullet-0"><span>bin&aacute;rn&iacute; prom&#283;nn&eacute;</span>
+            <hr style="page-break-before:always;display:none;">
+        </li>
+    </ul>
+    <h2 class="c36" id="h.z7dlzkqk0nsm"><span class="c49">Logick&eacute; operace</span></h2>
+    <ul class="c0 lst-kix_w2650yg5qh-0 start">
+        <li class="c2 c4 li-bullet-0"><span class="c6">un&aacute;rn&iacute; &ndash; pouze jeden operand (&not;x)</span>
+        </li>
+    </ul>
+    <ul class="c0 lst-kix_w2650yg5qh-1 start">
+        <li class="c2 c9 li-bullet-0"><span class="c6">negace</span></li>
+    </ul>
+    <ul class="c0 lst-kix_w2650yg5qh-2 start">
+        <li class="c2 c5 li-bullet-0"><span class="c6">&not;1 &hArr; 0</span></li>
+        <li class="c2 c5 li-bullet-0"><span class="c6">&not;sv&iacute;t&iacute; &hArr; nesv&iacute;t&iacute;</span></li>
+    </ul>
+    <ul class="c0 lst-kix_w2650yg5qh-0">
+        <li class="c2 c4 li-bullet-0"><span class="c6">bin&aacute;rn&iacute;</span></li>
+    </ul>
+    <ul class="c0 lst-kix_w2650yg5qh-1 start">
+        <li class="c2 c9 li-bullet-0"><span
+                class="c6">konjunkce (&and;, AND, &amp;&amp;) = logick&yacute; sou&#269;in</span></li>
+    </ul>
+    <ul class="c0 lst-kix_w2650yg5qh-2 start">
+        <li class="c2 c5 li-bullet-0"><span class="c6">1 pokud plat&iacute; oboje</span></li>
+    </ul>
+    <ul class="c0 lst-kix_w2650yg5qh-1">
+        <li class="c2 c9 li-bullet-0"><span class="c6">disjunkce (&or;, OR, ||) = logick&yacute; sou&#269;et</span></li>
+    </ul>
+    <ul class="c0 lst-kix_w2650yg5qh-2 start">
+        <li class="c2 c5 li-bullet-0"><span class="c6">1 pokud je pravda alespo&#328; jeden v&yacute;rok</span></li>
+    </ul>
+    <ul class="c0 lst-kix_w2650yg5qh-1">
+        <li class="c2 c9 li-bullet-0"><span class="c6">implikace (&rArr;)</span></li>
+    </ul>
+    <ul class="c0 lst-kix_w2650yg5qh-2 start">
+        <li class="c2 c5 li-bullet-0"><span class="c6">vztah vypl&yacute;v&aacute;n&iacute; nebo zahrnut&iacute;</span>
+        </li>
+        <li class="c2 c5 li-bullet-0"><span class="c6">0 pr&aacute;v&#283; pokud je prvn&iacute; v&yacute;rok pravda a druh&yacute; nepravda</span>
+        </li>
+    </ul>
+    <ul class="c0 lst-kix_w2650yg5qh-1">
+        <li class="c2 c9 li-bullet-0"><span class="c6">ekvivalence (&hArr;)</span></li>
+    </ul>
+    <ul class="c0 lst-kix_w2650yg5qh-2 start">
+        <li class="c2 c5 li-bullet-0"><span class="c6">pravda pokud maj&iacute; oba v&yacute;roky stejnou hodnotu</span>
+        </li>
+    </ul>
+    <p class="c2 c21"><span class="c6"></span></p>
+    <table class="c25">
+        <tr class="c26">
+            <td class="c65" colspan="1" rowspan="1"><p class="c16"><span class="c13">A</span></p></td>
+            <td class="c63" colspan="1" rowspan="1"><p class="c16"><span class="c13">B</span></p></td>
+            <td class="c40" colspan="1" rowspan="1"><p class="c16"><span class="c13">A &and; B</span></p></td>
+            <td class="c46" colspan="1" rowspan="1"><p class="c16"><span class="c13">A &or; B</span></p></td>
+            <td class="c46" colspan="1" rowspan="1"><p class="c16"><span class="c13">A &rArr; B</span></p></td>
+            <td class="c32" colspan="1" rowspan="1"><p class="c16"><span class="c13">A &hArr; B</span></p></td>
+        </tr>
+        <tr class="c26">
+            <td class="c45" colspan="1" rowspan="1"><p class="c16"><span class="c6">1</span></p></td>
+            <td class="c12" colspan="1" rowspan="1"><p class="c16"><span class="c6">1</span></p></td>
+            <td class="c55" colspan="1" rowspan="1"><p class="c16"><span class="c6">1</span></p></td>
+            <td class="c43" colspan="1" rowspan="1"><p class="c16"><span class="c6">1</span></p></td>
+            <td class="c43" colspan="1" rowspan="1"><p class="c16"><span class="c6">1</span></p></td>
+            <td class="c50" colspan="1" rowspan="1"><p class="c16"><span class="c6">1</span></p></td>
+        </tr>
+        <tr class="c26">
+            <td class="c27" colspan="1" rowspan="1"><p class="c16"><span class="c6">1</span></p></td>
+            <td class="c17" colspan="1" rowspan="1"><p class="c16"><span class="c6">0</span></p></td>
+            <td class="c22" colspan="1" rowspan="1"><p class="c16"><span class="c6">0</span></p></td>
+            <td class="c8" colspan="1" rowspan="1"><p class="c16"><span class="c6">1</span></p></td>
+            <td class="c8" colspan="1" rowspan="1"><p class="c16"><span class="c6">0</span></p></td>
+            <td class="c57" colspan="1" rowspan="1"><p class="c16"><span class="c6">0</span></p></td>
+        </tr>
+        <tr class="c26">
+            <td class="c27" colspan="1" rowspan="1"><p class="c16"><span class="c6">0</span></p></td>
+            <td class="c17" colspan="1" rowspan="1"><p class="c16"><span class="c6">1</span></p></td>
+            <td class="c22" colspan="1" rowspan="1"><p class="c16"><span class="c6">0</span></p></td>
+            <td class="c8" colspan="1" rowspan="1"><p class="c16"><span class="c6">1</span></p></td>
+            <td class="c8" colspan="1" rowspan="1"><p class="c16"><span class="c6">1</span></p></td>
+            <td class="c57" colspan="1" rowspan="1"><p class="c16"><span class="c6">0</span></p></td>
+        </tr>
+        <tr class="c26">
+            <td class="c27" colspan="1" rowspan="1"><p class="c16"><span class="c6">0</span></p></td>
+            <td class="c17" colspan="1" rowspan="1"><p class="c16"><span class="c6">0</span></p></td>
+            <td class="c22" colspan="1" rowspan="1"><p class="c16"><span class="c6">0</span></p></td>
+            <td class="c8" colspan="1" rowspan="1"><p class="c16"><span class="c6">0</span></p></td>
+            <td class="c8" colspan="1" rowspan="1"><p class="c16"><span class="c6">1</span></p></td>
+            <td class="c57" colspan="1" rowspan="1"><p class="c16"><span class="c6">1</span></p></td>
+        </tr>
+    </table>
+    <p class="c2 c21"><span class="c6"></span></p>
+    <h2 class="c36" id="h.omcu6vz5lwe3"><span class="c49">Z&aacute;kladn&iacute; logick&eacute; &#269;leny</span></h2>
+    <ul class="c0 lst-kix_h99iabqiuzou-0 start">
+        <li class="c2 c4 li-bullet-0"><span class="c6">z&aacute;kladn&iacute; stavebn&iacute; prvky logick&yacute;ch obvod&#367;</span>
+        </li>
+        <li class="c2 c4 li-bullet-0"><span class="c6">vy&#269;&iacute;sluje logickou funkci</span></li>
+    </ul>
+    <ul class="c0 lst-kix_h99iabqiuzou-1 start">
+        <li class="c2 c9 li-bullet-0"><img
+                src="/assets/cislice/image2.png">
+        </li>
+        <li class="c2 c9 li-bullet-0"><span class="c6">logick&yacute; &#269;len p&#345;ijme vstup, vy&#269;&iacute;sl&iacute; funkci a vyd&aacute; v&yacute;stup</span>
+        </li>
+    </ul>
+    <ul class="c0 lst-kix_h99iabqiuzou-0">
+        <li class="c2 c4 li-bullet-0"><span class="c6">logick&yacute; &#269;len = hradlo</span></li>
+    </ul>
+    <ul class="c0 lst-kix_h99iabqiuzou-1 start">
+        <li class="c2 c9 li-bullet-0"><span class="c6">komponenta v obvodu</span></li>
+    </ul>
+    <ul class="c0 lst-kix_h99iabqiuzou-0">
+        <li class="c2 c4 li-bullet-0"><span class="c6">pomoc&iacute; &#269;len&#367; AND, OR a NOT lze realizovat jak&yacute;koli logick&yacute; obvod</span>
+        </li>
+    </ul>
+    <ul class="c0 lst-kix_h99iabqiuzou-1 start">
+        <li class="c2 c9 li-bullet-0"><span class="c6">&#269;leny AND a OR jsou pomoc&iacute; &#269;lenu NOT komplement&aacute;rn&iacute;</span>
+        </li>
+    </ul>
+    <ul class="c0 lst-kix_h99iabqiuzou-2 start">
+        <li class="c2 c5 li-bullet-0"><span
+                class="c6">vhodn&yacute;m zp&#367;sobem je m&#367;&#382;eme za sebe nahradit</span></li>
+    </ul>
+    <ul class="c0 lst-kix_h99iabqiuzou-1">
+        <li class="c2 c9 li-bullet-0"><span class="c6">jak&yacute;koliv &#269;&iacute;slicov&yacute; syst&eacute;m jde implementovat jen pomoc&iacute; &#269;len&#367; NAND nebo NOR nebo AND a NOT nebo OR a NOT</span>
+        </li>
+    </ul>
+    <ul class="c0 lst-kix_h99iabqiuzou-2 start">
+        <li class="c2 c5 li-bullet-0"><span class="c6">v&#382;dy sta&#269;&iacute; &#269;len se dv&#283;ma vstupy</span>
+        </li>
+        <li class="c2 c5 li-bullet-0"><span class="c6">nejde to ale s &#269;lenem XOR</span></li>
+    </ul>
+    <ul class="c0 lst-kix_h99iabqiuzou-1">
+        <li class="c2 c9 li-bullet-0"><span class="c6">NAND a NOR = &bdquo;univerz&aacute;ln&iacute; logick&eacute; &#269;leny&ldquo;</span>
+        </li>
+    </ul>
+    <ul class="c0 lst-kix_h99iabqiuzou-0">
+        <li class="c2 c4 li-bullet-0"><span class="c6">realizace zapojen&iacute;m vhodn&yacute;ch sou&#269;&aacute;stek: tranzistory, diody, rezistory, &hellip;</span>
+        </li>
+        <li class="c2 c4 li-bullet-0"><span
+                class="c6">z nich se pot&eacute; tvo&#345;&iacute; logick&eacute; obvody</span>
+        </li>
+        <li class="c2 c4 li-bullet-0"><span class="c6">existuj&iacute; i IMPLY a NIMPLY pro implikaci</span></li>
+    </ul>
+    <p class="c2 c21"><span class="c6"></span></p>
+    <table class="c25">
+        <tr class="c26">
+            <td class="c24" colspan="1" rowspan="1"><h3 class="c33" id="h.36yjvi7fj52x"><span class="c14">Opakova&#269; (repeater)</span>
+            </h3>
+                <ul class="c0 lst-kix_7nkcpgc7u0vf-0 start">
+                    <li class="c2 c4 li-bullet-0"><span>funkce identity: </span><img
+                            src="/assets/cislice/image3.png"></li>
+                    <li class="c2 c4 li-bullet-0"><span class="c6">pou&#382;it&iacute;: buffer &ndash; zpo&#382;&#271;uje sign&aacute;l</span>
+                    </li>
+                </ul>
+                <p class="c16"><span
+                        style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 286.00px; height: 118.67px;"><img
+                        alt="" src="/assets/cislice/image16.png"
+                        style="width: 286.00px; height: 118.67px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                        title=""></span></p></td>
+            <td class="c24" colspan="1" rowspan="1"><h3 class="c11" id="h.7p95szqzguxt"><span
+                    class="c14">NOT (invertor)</span></h3>
+                <ul class="c0 lst-kix_lsish1ojnq48-0 start">
+                    <li class="c7 c4 li-bullet-0"><span>funkce logick&eacute; negace </span><img
+                            src="/assets/cislice/image4.png"></li>
+                    <li class="c7 c4 li-bullet-0"><span class="c6">v programov&aacute;n&iacute;: Q = !A</span></li>
+                </ul>
+                <p class="c7"><span
+                        style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 286.00px; height: 118.67px;"><img
+                        alt="" src="/assets/cislice/image24.png"
+                        style="width: 286.00px; height: 118.67px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                        title=""></span></p></td>
+        </tr>
+        <tr class="c26">
+            <td class="c24" colspan="1" rowspan="1"><h3 class="c11" id="h.ekagd4fci1zq"><span
+                    class="c14">AND (konjunktor)</span></h3>
+                <ul class="c0 lst-kix_ah13tn6wgox8-0 start">
+                    <li class="c7 c4 li-bullet-0"><span class="c6">funkce log. sou&#269;inu = konjunkce</span></li>
+                </ul>
+                <ul class="c0 lst-kix_ah13tn6wgox8-1 start">
+                    <li class="c7 c9 li-bullet-0"><img
+                            src="/assets/cislice/image5.png"></li>
+                </ul>
+                <ul class="c0 lst-kix_ah13tn6wgox8-0">
+                    <li class="c7 c4 li-bullet-0"><span
+                            class="c6">v programov&aacute;n&iacute;: Q = A &amp;&amp; B</span>
+                    </li>
+                </ul>
+                <p class="c7"><span
+                        style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 286.00px; height: 118.67px;"><img
+                        alt="" src="/assets/cislice/image18.png"
+                        style="width: 286.00px; height: 118.67px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                        title=""></span></p></td>
+            <td class="c24" colspan="1" rowspan="1"><h3 class="c11" id="h.q22r9n4cgwk8"><span
+                    class="c14">OR (disjunktor)</span></h3>
+                <ul class="c0 lst-kix_y79k48m8e993-0 start">
+                    <li class="c7 c4 li-bullet-0"><span class="c6">funkce log. sou&#269;tu = disjunkce</span></li>
+                </ul>
+                <ul class="c0 lst-kix_y79k48m8e993-1 start">
+                    <li class="c7 c9 li-bullet-0"><img
+                            src="/assets/cislice/image6.png"></li>
+                </ul>
+                <ul class="c0 lst-kix_y79k48m8e993-0">
+                    <li class="c7 c4 li-bullet-0"><span class="c6">v programov&aacute;n&iacute;: Q = A || B</span></li>
+                </ul>
+                <p class="c7"><span
+                        style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 286.00px; height: 118.67px;"><img
+                        alt="" src="/assets/cislice/image14.png"
+                        style="width: 286.00px; height: 118.67px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                        title=""></span></p></td>
+        </tr>
+        <tr class="c26">
+            <td class="c24" colspan="1" rowspan="1"><h3 class="c11" id="h.sqhi4h2g3c8d"><span class="c14">NAND (Shefferova funkce)</span>
+            </h3>
+                <ul class="c0 lst-kix_xgpega8oz3gm-0 start">
+                    <li class="c7 c4 li-bullet-0"><span class="c6">funkce negovan&eacute;ho log. sou&#269;inu</span>
+                    </li>
+                </ul>
+                <ul class="c0 lst-kix_xgpega8oz3gm-1 start">
+                    <li class="c7 c9 li-bullet-0"><img
+                            src="/assets/cislice/image7.png"></li>
+                </ul>
+                <ul class="c0 lst-kix_xgpega8oz3gm-0">
+                    <li class="c7 c4 li-bullet-0"><span
+                            class="c6">v programov&aacute;n&iacute;: Q = !(A &amp;&amp; B)</span></li>
+                </ul>
+                <p class="c7"><span
+                        style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 286.00px; height: 118.67px;"><img
+                        alt="" src="/assets/cislice/image19.png"
+                        style="width: 286.00px; height: 118.67px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                        title=""></span></p></td>
+            <td class="c24" colspan="1" rowspan="1"><h3 class="c11" id="h.a14b7nebpd9m"><span class="c14">NOR (Perceova funkce)</span>
+            </h3>
+                <ul class="c0 lst-kix_srlbymg9uks3-0 start">
+                    <li class="c7 c4 li-bullet-0"><span class="c6">funkce negovan&eacute;ho log. sou&#269;tu</span></li>
+                </ul>
+                <ul class="c0 lst-kix_srlbymg9uks3-1 start">
+                    <li class="c7 c9 li-bullet-0"><img
+                            src="/assets/cislice/image7.png"></li>
+                </ul>
+                <ul class="c0 lst-kix_srlbymg9uks3-0">
+                    <li class="c7 c4 li-bullet-0"><span class="c6">v programov&aacute;n&iacute;: Q = !(A || B)</span>
+                    </li>
+                </ul>
+                <p class="c7"><span
+                        style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 286.00px; height: 118.67px;"><img
+                        alt="" src="/assets/cislice/image17.png"
+                        style="width: 286.00px; height: 118.67px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                        title=""></span></p></td>
+        </tr>
+        <tr class="c26">
+            <td class="c24" colspan="1" rowspan="1"><h3 class="c11" id="h.x3pg56cdsnvm"><span class="c14">XOR (exkluzivn&iacute; OR)</span>
+            </h3>
+                <ul class="c0 lst-kix_uqiwc7bot5vj-0 start">
+                    <li class="c7 c4 li-bullet-0"><span class="c6">exkluzivn&iacute; logick&yacute; sou&#269;et</span>
+                    </li>
+                    <li class="c7 c4 li-bullet-0"><span>pravda jen kdy&#382; </span><img
+                            src="/assets/cislice/image8.png"><span
+                            class="c6">&nbsp;([1, 0], [0, 1])</span>
+                    </li>
+                    <li class="c7 c4 li-bullet-0"><img
+                            src="/assets/cislice/image9.png"></li>
+                    <li class="c7 c4 li-bullet-0"><span
+                            class="c6">Q = A ^ B = (!A &amp;&amp; B) || (A &amp;&amp; !B)</span>
+                    </li>
+                </ul>
+                <p class="c7"><span
+                        style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 286.00px; height: 118.67px;"><img
+                        alt="" src="/assets/cislice/image13.png"
+                        style="width: 286.00px; height: 118.67px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                        title=""></span></p></td>
+            <td class="c24" colspan="1" rowspan="1"><h3 class="c11" id="h.4ynkwrr2kung"><span class="c14">XNOR (negace exkluzivn&iacute;ho OR)</span>
+            </h3>
+                <ul class="c0 lst-kix_v1j4w7crqmdj-0 start">
+                    <li class="c7 c4 li-bullet-0"><span class="c6">negace exkluzivn&iacute;ho log. sou&#269;tu</span>
+                    </li>
+                    <li class="c7 c4 li-bullet-0"><span class="c6">pravda jen kdy&#382; A = B ([0, 0], [1, 1])</span>
+                    </li>
+                    <li class="c7 c4 li-bullet-0"><img
+                            src="/assets/cislice/image10.png"></li>
+                    <li class="c4 c7 li-bullet-0"><span
+                            class="c6">Q = !(A ^ B) = (A &amp;&amp; B) || (!A &amp;&amp; !B)</span></li>
+                </ul>
+                <p class="c7"><span
+                        style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 286.00px; height: 118.67px;"><img
+                        alt="" src="/assets/cislice/image20.png"
+                        style="width: 286.00px; height: 118.67px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                        title=""></span></p></td>
+        </tr>
+    </table>
+    <h2 class="c36" id="h.jvvkrj4x7tl5"><span class="c49">Logick&eacute; obvody</span></h2>
+    <ul class="c0 lst-kix_29ol2lvs46lb-0 start">
+        <li class="c2 c4 li-bullet-0"><span class="c6">pracuje s diskr&eacute;tn&iacute;mi stavy</span></li>
+        <li class="c2 c4 li-bullet-0"><span class="c6">tvo&#345;&iacute; ho logick&eacute; &#269;leny</span></li>
+        <li class="c2 c4 li-bullet-0"><span class="c6">skl&aacute;daj&iacute; se z nich &#269;&iacute;slicov&eacute; syst&eacute;my (za&#345;&iacute;zen&iacute; pracuj&iacute;c&iacute; s daty v digit&aacute;ln&iacute; podob&#283;)</span>
+        </li>
+        <li class="c2 c4 li-bullet-0"><span class="c6">d&#283;l&iacute;me na</span></li>
+    </ul>
+    <ul class="c0 lst-kix_29ol2lvs46lb-1 start">
+        <li class="c2 c9 li-bullet-0"><span class="c6">kombina&#269;n&iacute;</span></li>
+    </ul>
+    <ul class="c0 lst-kix_29ol2lvs46lb-2 start">
+        <li class="c2 c5 li-bullet-0"><span class="c6">hodnoty v&yacute;stupn&iacute;ch prom&#283;nn&yacute;ch jsou funkc&iacute; vstupn&iacute;ch prom&#283;nn&yacute;ch</span>
+        </li>
+        <li class="c2 c5 li-bullet-0"><span class="c6">bin&aacute;rn&iacute; s&#269;&iacute;ta&#269;ka, kod&eacute;r, dekod&eacute;r, &hellip; </span>
+        </li>
+        <li class="c2 c5 li-bullet-0"><span
+                class="c6">z&aacute;le&#382;&iacute; jen na kombinaci vstupn&iacute;ch hodnot</span></li>
+    </ul>
+    <ul class="c0 lst-kix_29ol2lvs46lb-1">
+        <li class="c2 c9 li-bullet-0"><span class="c6">sekven&#269;n&iacute;</span></li>
+    </ul>
+    <ul class="c0 lst-kix_29ol2lvs46lb-2 start">
+        <li class="c2 c5 li-bullet-0"><span class="c6">nez&aacute;le&#382;&iacute; pouze na kombinaci vstupn&iacute;ch hodnot, ale i na n&#283;jak&eacute; sekvenci p&#345;edchoz&iacute;ch vstupn&iacute;ch hodnot</span>
+        </li>
+        <li class="c2 c5 li-bullet-0"><span
+                class="c6">obvody maj&iacute; pam&#283;&#357; = vnit&#345;n&iacute; stav obvodu</span></li>
+        <li class="c2 c5 li-bullet-0"><span class="c6">CPU, &hellip;</span></li>
+    </ul>
+    <h3 class="c33" id="h.zhxfibwkhxrk"><span class="c14">Polovi&#269;n&iacute; s&#269;&iacute;ta&#269;ka</span></h3>
+    <ul class="c0 lst-kix_cbqqdlnb22a2-0 start">
+        <li class="c2 c4 li-bullet-0"><span class="c6">realizuje s&#269;&iacute;t&aacute;n&iacute; dvou jednobitov&yacute;ch &#269;&iacute;sel</span>
+        </li>
+        <li class="c2 c4 li-bullet-0"><span class="c6">vstup: s&#269;&iacute;tance A, B</span></li>
+        <li class="c2 c4 li-bullet-0"><span class="c6">v&yacute;stupu: S &ndash; sou&#269;et, C &ndash; p&#345;enos do vy&scaron;&scaron;&iacute;ho &#345;&aacute;du</span>
+        </li>
+    </ul>
+    <ul class="c0 lst-kix_s96vmbkw97o6-0 start">
+        <li class="c2 c4 li-bullet-0"><span class="c6">zvl&aacute;d&aacute; p&#345;en&aacute;&scaron;et p&#345;&iacute;znak do vy&scaron;&scaron;&iacute;ho &#345;&aacute;du, ale nedok&aacute;&#382;e zpracovat p&#345;enos z ni&#382;&scaron;&iacute;ho &#345;&aacute;du</span>
+        </li>
+    </ul>
+    <p class="c2"><span
+            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 269.50px; height: 173.80px;"><img
+            alt="" src="/assets/cislice/image21.png"
+            style="width: 269.50px; height: 173.80px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+            title=""></span></p>
+    <p class="c2"><span>Autor: en:User:Cburnett &ndash; Vlastn&iacute; d&iacute;lo &nbsp;Tento vektorov&yacute; obr&aacute;zek byl vytvo&#345;en programem Inkscape ., CC BY-SA 3.0, </span><span
+            class="c20"><a class="c15"
+                           href="https://www.google.com/url?q=https://commons.wikimedia.org/w/index.php?curid%3D1477592&amp;sa=D&amp;source=editors&amp;ust=1778683862471500&amp;usg=AOvVaw1C2xXst6A0JQXmunSRFEKo">https://commons.wikimedia.org/w/index.php?curid=1477592</a></span>
+    </p>
+    <p class="c2 c21"><span class="c6"></span></p>
+    <table class="c25">
+        <tr class="c30">
+            <td class="c61" colspan="2" rowspan="1"><p class="c62"><span class="c13">vstup</span></p></td>
+            <td class="c10" colspan="3" rowspan="1"><p class="c62"><span class="c13">v&yacute;stup</span></p></td>
+        </tr>
+        <tr class="c30">
+            <td class="c47" colspan="1" rowspan="1"><p class="c7"><span class="c13">A</span></p></td>
+            <td class="c34" colspan="1" rowspan="1"><p class="c7"><span class="c13">B</span></p></td>
+            <td class="c19" colspan="1" rowspan="1"><p class="c7"><span class="c13">C</span></p></td>
+            <td class="c23" colspan="1" rowspan="1"><p class="c7"><span class="c13">S</span></p></td>
+            <td class="c29" colspan="1" rowspan="1"><p class="c7"><span class="c13">&#269;&iacute;slo</span></p></td>
+        </tr>
+        <tr class="c30">
+            <td class="c47" colspan="1" rowspan="1"><p class="c7"><span class="c6">0</span></p></td>
+            <td class="c34" colspan="1" rowspan="1"><p class="c7"><span class="c6">0</span></p></td>
+            <td class="c19" colspan="1" rowspan="1"><p class="c7"><span class="c6">0</span></p></td>
+            <td class="c23" colspan="1" rowspan="1"><p class="c7"><span class="c6">0</span></p></td>
+            <td class="c29" colspan="1" rowspan="1"><p class="c7"><span class="c6">00</span></p></td>
+        </tr>
+        <tr class="c30">
+            <td class="c47" colspan="1" rowspan="1"><p class="c7"><span class="c6">0</span></p></td>
+            <td class="c34" colspan="1" rowspan="1"><p class="c7"><span class="c6">1</span></p></td>
+            <td class="c19" colspan="1" rowspan="1"><p class="c7"><span class="c6">0</span></p></td>
+            <td class="c23" colspan="1" rowspan="1"><p class="c7"><span class="c6">1</span></p></td>
+            <td class="c29" colspan="1" rowspan="1"><p class="c7"><span class="c6">01</span></p></td>
+        </tr>
+        <tr class="c30">
+            <td class="c47" colspan="1" rowspan="1"><p class="c7"><span class="c6">1</span></p></td>
+            <td class="c34" colspan="1" rowspan="1"><p class="c7"><span class="c6">0</span></p></td>
+            <td class="c19" colspan="1" rowspan="1"><p class="c7"><span class="c6">0</span></p></td>
+            <td class="c23" colspan="1" rowspan="1"><p class="c7"><span class="c6">1</span></p></td>
+            <td class="c29" colspan="1" rowspan="1"><p class="c7"><span class="c6">01</span></p></td>
+        </tr>
+        <tr class="c30">
+            <td class="c47" colspan="1" rowspan="1"><p class="c7"><span class="c6">1</span></p></td>
+            <td class="c34" colspan="1" rowspan="1"><p class="c7"><span class="c6">1</span></p></td>
+            <td class="c19" colspan="1" rowspan="1"><p class="c7"><span class="c6">1</span></p></td>
+            <td class="c23" colspan="1" rowspan="1"><p class="c7"><span class="c6">0</span></p></td>
+            <td class="c29" colspan="1" rowspan="1"><p class="c7"><span class="c6">10</span></p></td>
+        </tr>
+    </table>
+    <p class="c2 c21"><span class="c6"></span></p>
+    <h3 class="c33" id="h.91nko4xwmiuz"><span class="c14">&Uacute;pln&aacute; s&#269;&iacute;ta&#269;ka</span></h3>
+    <ul class="c0 lst-kix_4cnfwuy5syq0-0 start">
+        <li class="c2 c4 li-bullet-0"><span class="c6">realizuje s&#269;&iacute;t&aacute;n&iacute; dvou jednobitov&yacute;ch &#269;&iacute;sel s p&#345;ihl&eacute;dnut&iacute;m k p&#345;enosu z ni&#382;&scaron;&iacute;ho &#345;&aacute;du</span>
+        </li>
+        <li class="c2 c4 li-bullet-0"><span class="c6">vstup: s&#269;&iacute;tance</span></li>
+    </ul>
+    <ul class="c0 lst-kix_4cnfwuy5syq0-1 start">
+        <li class="c2 c9 li-bullet-0"><span class="c6">A</span></li>
+        <li class="c2 c9 li-bullet-0"><span class="c6">B</span></li>
+        <li class="c2 c9 li-bullet-0">
+            <span>p&#345;&iacute;znak p&#345;enosu z ni&#382;&scaron;&iacute;ho &#345;&aacute;du </span><span
+                class="c3">carry-in</span><span>: </span><img
+                src="/assets/cislice/image11.png"></li>
+    </ul>
+    <ul class="c0 lst-kix_4cnfwuy5syq0-0">
+        <li class="c2 c4 li-bullet-0"><span class="c6">v&yacute;stup:</span></li>
+    </ul>
+    <ul class="c0 lst-kix_4cnfwuy5syq0-1 start">
+        <li class="c2 c9 li-bullet-0"><span class="c6">sou&#269;et S</span></li>
+        <li class="c2 c9 li-bullet-0"><span>p&#345;&iacute;znak p&#345;enosu do vy&scaron;&scaron;&iacute;ho &#345;&aacute;du </span><span
+                class="c3">carry-out</span><span>: </span><img
+                src="/assets/cislice/image12.png"></li>
+    </ul>
+    <ul class="c0 lst-kix_4cnfwuy5syq0-0">
+        <li class="c2 c4 li-bullet-0"><span class="c6">2 polovi&#269;n&iacute; s&#269;&iacute;ta&#269;ky + OR</span>
+        </li>
+    </ul>
+    <ul class="c0 lst-kix_4cnfwuy5syq0-1 start">
+        <li class="c2 c9 li-bullet-0"><span class="c6">OR m&#367;&#382;eme nahradit i XOR, proto&#382;e [1, 1] nikdy nenastane</span>
+        </li>
+    </ul>
+    <ul class="c0 lst-kix_4cnfwuy5syq0-2 start">
+        <li class="c2 c5 li-bullet-0"><span class="c6">pro sestaven&iacute; &uacute;pln&eacute; s&#269;&iacute;ta&#269;ky tedy sta&#269;&iacute; jen 2 hradla</span>
+        </li>
+    </ul>
+    <ul class="c0 lst-kix_4cnfwuy5syq0-0">
+        <li class="c2 c4 li-bullet-0"><span>m&#367;&#382;eme je &#345;et&#283;zit (</span><span>C</span><span
+                class="c56">o </span><span>se propoj&iacute; s C</span><span class="c56">i</span><span>) &rarr; s&#269;&iacute;t&aacute;n&iacute; v&iacute;cebitov&yacute;ch &#269;&iacute;sel</span>
+        </li>
+    </ul>
+    <p class="c2"><span
+            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 601.70px; height: 200.00px;"><img
+            alt="" src="/assets/cislice/image25.png"
+            style="width: 601.70px; height: 200.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+            title=""></span></p>
+    <p class="c2 c21"><span class="c6"></span></p>
+    <table class="c25">
+        <tr class="c30">
+            <td class="c64" colspan="3" rowspan="1"><p class="c7"><span class="c13">vstup</span></p></td>
+            <td class="c41" colspan="2" rowspan="1"><p class="c7"><span class="c13">v&yacute;stup</span></p></td>
+        </tr>
+        <tr class="c66">
+            <td class="c38" colspan="1" rowspan="1"><p class="c7"><span class="c54">C</span><span class="c42">i</span>
+            </p>
+            </td>
+            <td class="c1" colspan="1" rowspan="1"><p class="c7"><span class="c13">B</span></p></td>
+            <td class="c18" colspan="1" rowspan="1"><p class="c7"><span class="c13">A</span></p></td>
+            <td class="c39" colspan="1" rowspan="1"><p class="c7"><span class="c54">C</span><span class="c42">o</span>
+            </p>
+            </td>
+            <td class="c37" colspan="1" rowspan="1"><p class="c7"><span class="c13">S</span></p></td>
+        </tr>
+        <tr class="c30">
+            <td class="c38" colspan="1" rowspan="1"><p class="c7"><span class="c6">0</span></p></td>
+            <td class="c1" colspan="1" rowspan="1"><p class="c7"><span class="c6">0</span></p></td>
+            <td class="c18" colspan="1" rowspan="1"><p class="c7"><span class="c6">0</span></p></td>
+            <td class="c39" colspan="1" rowspan="1"><p class="c7"><span class="c6">0</span></p></td>
+            <td class="c37" colspan="1" rowspan="1"><p class="c7"><span class="c6">0</span></p></td>
+        </tr>
+        <tr class="c30">
+            <td class="c38" colspan="1" rowspan="1"><p class="c7"><span class="c6">0</span></p></td>
+            <td class="c1" colspan="1" rowspan="1"><p class="c7"><span class="c6">0</span></p></td>
+            <td class="c18" colspan="1" rowspan="1"><p class="c7"><span class="c6">1</span></p></td>
+            <td class="c39" colspan="1" rowspan="1"><p class="c7"><span class="c6">0</span></p></td>
+            <td class="c37" colspan="1" rowspan="1"><p class="c7"><span class="c6">1</span></p></td>
+        </tr>
+        <tr class="c30">
+            <td class="c38" colspan="1" rowspan="1"><p class="c7"><span class="c6">0</span></p></td>
+            <td class="c1" colspan="1" rowspan="1"><p class="c7"><span class="c6">1</span></p></td>
+            <td class="c18" colspan="1" rowspan="1"><p class="c7"><span class="c6">0</span></p></td>
+            <td class="c39" colspan="1" rowspan="1"><p class="c7"><span class="c6">0</span></p></td>
+            <td class="c37" colspan="1" rowspan="1"><p class="c7"><span class="c6">1</span></p></td>
+        </tr>
+        <tr class="c30">
+            <td class="c38" colspan="1" rowspan="1"><p class="c7"><span class="c6">0</span></p></td>
+            <td class="c1" colspan="1" rowspan="1"><p class="c7"><span class="c6">1</span></p></td>
+            <td class="c18" colspan="1" rowspan="1"><p class="c7"><span class="c6">1</span></p></td>
+            <td class="c39" colspan="1" rowspan="1"><p class="c7"><span class="c6">1</span></p></td>
+            <td class="c37" colspan="1" rowspan="1"><p class="c7"><span class="c6">0</span></p></td>
+        </tr>
+        <tr class="c30">
+            <td class="c38" colspan="1" rowspan="1"><p class="c7"><span class="c6">1</span></p></td>
+            <td class="c1" colspan="1" rowspan="1"><p class="c7"><span class="c6">0</span></p></td>
+            <td class="c18" colspan="1" rowspan="1"><p class="c7"><span class="c6">0</span></p></td>
+            <td class="c39" colspan="1" rowspan="1"><p class="c7"><span class="c6">0</span></p></td>
+            <td class="c37" colspan="1" rowspan="1"><p class="c7"><span class="c6">1</span></p></td>
+        </tr>
+        <tr class="c30">
+            <td class="c38" colspan="1" rowspan="1"><p class="c7"><span class="c6">1</span></p></td>
+            <td class="c1" colspan="1" rowspan="1"><p class="c7"><span class="c6">0</span></p></td>
+            <td class="c18" colspan="1" rowspan="1"><p class="c7"><span class="c6">1</span></p></td>
+            <td class="c39" colspan="1" rowspan="1"><p class="c7"><span class="c6">1</span></p></td>
+            <td class="c37" colspan="1" rowspan="1"><p class="c7"><span class="c6">0</span></p></td>
+        </tr>
+        <tr class="c30">
+            <td class="c38" colspan="1" rowspan="1"><p class="c7"><span class="c6">1</span></p></td>
+            <td class="c1" colspan="1" rowspan="1"><p class="c7"><span class="c6">1</span></p></td>
+            <td class="c18" colspan="1" rowspan="1"><p class="c7"><span class="c6">0</span></p></td>
+            <td class="c39" colspan="1" rowspan="1"><p class="c7"><span class="c6">1</span></p></td>
+            <td class="c37" colspan="1" rowspan="1"><p class="c7"><span class="c6">0</span></p></td>
+        </tr>
+        <tr class="c30">
+            <td class="c38" colspan="1" rowspan="1"><p class="c7"><span class="c6">1</span></p></td>
+            <td class="c1" colspan="1" rowspan="1"><p class="c7"><span class="c6">1</span></p></td>
+            <td class="c18" colspan="1" rowspan="1"><p class="c7"><span class="c6">1</span></p></td>
+            <td class="c39" colspan="1" rowspan="1"><p class="c7"><span class="c6">1</span></p></td>
+            <td class="c37" colspan="1" rowspan="1"><p class="c7"><span class="c6">1</span></p></td>
+        </tr>
+    </table>
+    <hr style="page-break-before:always;display:none;">
+    <p class="c2 c21"><span class="c6"></span></p>
+    <h2 class="c36" id="h.6292wlqnfe6a"><span class="c49">Bonus: vnit&#345;nosti logick&yacute;ch &#269;len&#367;</span>
+    </h2>
+    <ul class="c0 lst-kix_8c3t7p7vfoqz-0 start">
+        <li class="c2 c4 li-bullet-0"><span class="c6">tranzistorov&eacute; &#269;i tranzistorovo-rezistorov&aacute; implementace logick&yacute;ch &#269;len&#367;</span>
+        </li>
+    </ul>
+    <p class="c2 c21"><span class="c6"></span></p>
+    <h3 class="c33" id="h.ujf6z0n9aplp"><span class="c14">NOT</span></h3>
+    <p class="c2"><span
+            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 265.46px; height: 280.89px;"><img
+            alt="" src="/assets/cislice/image15.png"
+            style="width: 265.46px; height: 280.89px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+            title=""></span></p>
+    <p class="c2"><span>By Tim Mathias - Own work, CC BY-SA 4.0, </span><span class="c20"><a class="c15"
+                                                                                             href="https://www.google.com/url?q=https://commons.wikimedia.org/w/index.php?curid%3D94091301&amp;sa=D&amp;source=editors&amp;ust=1778683862489031&amp;usg=AOvVaw2mNdH9_1TpKpUCFnXwr1j5">https://commons.wikimedia.org/w/index.php?curid=94091301</a></span>
+    </p>
+    <h3 class="c33" id="h.g8na6gu1k6hb"><span class="c14">AND</span></h3>
+    <p class="c2"><span
+            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 225.50px; height: 328.99px;"><img
+            alt="" src="/assets/cislice/image22.png"
+            style="width: 225.50px; height: 328.99px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+            title=""></span></p>
+    <p class="c2"><span>By EBatlleP - Own work, CC BY-SA 3.0, </span><span class="c20"><a class="c15"
+                                                                                          href="https://www.google.com/url?q=https://commons.wikimedia.org/w/index.php?curid%3D32544198&amp;sa=D&amp;source=editors&amp;ust=1778683862489518&amp;usg=AOvVaw10RNkoOJYkhsP4vCZZnIc9">https://commons.wikimedia.org/w/index.php?curid=32544198</a></span>
+    </p>
+    <p class="c2 c21"><span class="c6"></span></p>
+    <h3 class="c33" id="h.8go53vbf5f5z"><span class="c14">OR</span></h3>
+    <p class="c2"><span
+            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 271.88px; height: 388.50px;"><img
+            alt="" src="/assets/cislice/image23.png"
+            style="width: 271.88px; height: 388.50px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+            title=""></span></p>
+    <p class="c2"><span>By EBatlleP - Own work, CC BY-SA 3.0, </span><span class="c20"><a class="c15"
+                                                                                          href="https://www.google.com/url?q=https://commons.wikimedia.org/w/index.php?curid%3D32105652&amp;sa=D&amp;source=editors&amp;ust=1778683862490028&amp;usg=AOvVaw0i2w6PRKNVZXqgk9U637h1">https://commons.wikimedia.org/w/index.php?curid=32105652</a></span>
+    </p>
+    <p class="c2 c21"><span class="c6"></span></p>
+    <p class="c2 c21"><span class="c6"></span></p>
+    <p class="c2 c21"><span class="c6"></span></p>
+    <hr style="page-break-before:always;display:none;">
+    <p class="c2 c21"><span class="c6"></span></p>
+    <h2 class="c36" id="h.nf6xbz2gsbvm"><span class="c49">Zdroje</span></h2>
+    <ul class="c0 lst-kix_5e339q69rqdz-0 start">
+        <li class="c28 c4 li-bullet-0"><span class="c6">PECINA, Mgr Pavel. Z&aacute;klady &#269;&iacute;slicov&eacute; techniky.</span>
+        </li>
+        <li class="c28 c4 li-bullet-0"><span>Bin&aacute;rn&iacute; s&#269;&iacute;ta&#269;ka. In: </span><span
+                class="c3">Wikipedie</span><span>&nbsp;[online]. 2025 [cit. 13.05.2026]. Dostupn&eacute; z: </span><span
+                class="c20"><a class="c15"
+                               href="https://www.google.com/url?q=https://cs.wikipedia.org/w/index.php?title%3DBin%25C3%25A1rn%25C3%25AD_s%25C4%258D%25C3%25ADta%25C4%258Dka%26oldid%3D25378412&amp;sa=D&amp;source=editors&amp;ust=1778683862490882&amp;usg=AOvVaw1zH_quzoCU-2aQriUsG4gC">https://cs.wikipedia.org/w/index.php?title=Bin%C3%A1rn%C3%AD_s%C4%8D%C3%ADta%C4%8Dka&amp;oldid=25378412</a></span>
+        </li>
+        <li class="c28 c4 li-bullet-0"><span>Booleova logika. In: </span><span class="c3">Wikipedie</span><span>&nbsp;[online]. 2025 [cit. 13.05.2026]. Dostupn&eacute; z: </span><span
+                class="c20"><a class="c15"
+                               href="https://www.google.com/url?q=https://cs.wikipedia.org/w/index.php?title%3DBooleova_logika%26oldid%3D25117538&amp;sa=D&amp;source=editors&amp;ust=1778683862491393&amp;usg=AOvVaw1VZ6pv5e8avx6EAovwU_j6">https://cs.wikipedia.org/w/index.php?title=Booleova_logika&amp;oldid=25117538</a></span>
+        </li>
+        <li class="c28 c4 li-bullet-0"><span>&#268;&iacute;slicov&aacute; technika. In: </span><span
+                class="c3">Wikipedie</span><span>&nbsp;[online]. 2024 [cit. 13.05.2026]. Dostupn&eacute; z: </span><span
+                class="c20"><a class="c15"
+                               href="https://www.google.com/url?q=https://cs.wikipedia.org/w/index.php?title%3D%25C4%258C%25C3%25ADslicov%25C3%25A1_technika%26oldid%3D23884617&amp;sa=D&amp;source=editors&amp;ust=1778683862491836&amp;usg=AOvVaw31_SDfIyjbJO0L8nDIOzUz">https://cs.wikipedia.org/w/index.php?title=%C4%8C%C3%ADslicov%C3%A1_technika&amp;oldid=23884617</a></span>
+        </li>
+        <li class="c28 c4 li-bullet-0"><span>Disjunkce. In: </span><span class="c3">Wikipedie</span><span>&nbsp;[online]. 2026 [cit. 13.05.2026]. Dostupn&eacute; z: </span><span
+                class="c20"><a class="c15"
+                               href="https://www.google.com/url?q=https://cs.wikipedia.org/w/index.php?title%3DDisjunkce%26oldid%3D25677915&amp;sa=D&amp;source=editors&amp;ust=1778683862492168&amp;usg=AOvVaw36m4ZEzeWE8lXLVv9O5r44">https://cs.wikipedia.org/w/index.php?title=Disjunkce&amp;oldid=25677915</a></span>
+        </li>
+        <li class="c28 c4 li-bullet-0"><span>Ekvivalence (matematika). In: </span><span
+                class="c3">Wikipedie</span><span>&nbsp;[online]. 2025 [cit. 13.05.2026]. Dostupn&eacute; z: </span><span
+                class="c20"><a class="c15"
+                               href="https://www.google.com/url?q=https://cs.wikipedia.org/w/index.php?title%3DEkvivalence_(matematika)%26oldid%3D25070071&amp;sa=D&amp;source=editors&amp;ust=1778683862492506&amp;usg=AOvVaw2W-ukcyXE6HtGj6CpPLIAQ">https://cs.wikipedia.org/w/index.php?title=Ekvivalence_(matematika)&amp;oldid=25070071</a></span>
+        </li>
+        <li class="c28 c4 li-bullet-0"><span>Implikace. In: </span><span class="c3">Wikipedie</span><span>&nbsp;[online]. 2025 [cit. 13.05.2026]. Dostupn&eacute; z: </span><span
+                class="c20"><a class="c15"
+                               href="https://www.google.com/url?q=https://cs.wikipedia.org/w/index.php?title%3DImplikace%26oldid%3D25543876&amp;sa=D&amp;source=editors&amp;ust=1778683862492802&amp;usg=AOvVaw1W6xag3UPwT48lPvGR-1c2">https://cs.wikipedia.org/w/index.php?title=Implikace&amp;oldid=25543876</a></span>
+        </li>
+        <li class="c4 c28 li-bullet-0"><span>Konjunkce (logika). In: </span><span class="c3">Wikipedie</span><span>&nbsp;[online]. 2022 [cit. 13.05.2026]. Dostupn&eacute; z: </span><span
+                class="c20"><a class="c15"
+                               href="https://www.google.com/url?q=https://cs.wikipedia.org/w/index.php?title%3DKonjunkce_(logika)%26oldid%3D21779255&amp;sa=D&amp;source=editors&amp;ust=1778683862493319&amp;usg=AOvVaw2RwdcuJ8jvcrCdo5d11kLs">https://cs.wikipedia.org/w/index.php?title=Konjunkce_(logika)&amp;oldid=21779255</a></span>
+        </li>
+        <li class="c28 c4 li-bullet-0"><span>Logic gates unified symbols - Wikimedia Commons. In: [cit. 13.05.2026]. Dostupn&eacute; z: </span><span
+                class="c20"><a class="c15"
+                               href="https://www.google.com/url?q=https://commons.wikimedia.org/wiki/Logic_gates_unified_symbols&amp;sa=D&amp;source=editors&amp;ust=1778683862493684&amp;usg=AOvVaw1My6ccY4q2XYHiYJFM48vv">https://commons.wikimedia.org/wiki/Logic_gates_unified_symbols</a></span>
+        </li>
+        <li class="c28 c4 li-bullet-0"><span>Logick&aacute; operace. In: </span><span class="c3">Wikipedie</span><span>&nbsp;[online]. 2023 [cit. 13.05.2026]. Dostupn&eacute; z: </span><span
+                class="c20"><a class="c15"
+                               href="https://www.google.com/url?q=https://cs.wikipedia.org/w/index.php?title%3DLogick%25C3%25A1_operace%26oldid%3D22462587&amp;sa=D&amp;source=editors&amp;ust=1778683862494113&amp;usg=AOvVaw1Bsgx39EnmcHhUwDW8l4Zz">https://cs.wikipedia.org/w/index.php?title=Logick%C3%A1_operace&amp;oldid=22462587</a></span>
+        </li>
+        <li class="c28 c4 li-bullet-0"><span>Logick&yacute; &#269;len. In: </span><span
+                class="c3">Wikipedie</span><span>&nbsp;[online]. 2025 [cit. 13.05.2026]. Dostupn&eacute; z: </span><span
+                class="c20"><a class="c15"
+                               href="https://www.google.com/url?q=https://cs.wikipedia.org/w/index.php?title%3DLogick%25C3%25BD_%25C4%258Dlen%26oldid%3D25377993&amp;sa=D&amp;source=editors&amp;ust=1778683862494504&amp;usg=AOvVaw0CizPKqJKolnPDeOFmn_iH">https://cs.wikipedia.org/w/index.php?title=Logick%C3%BD_%C4%8Dlen&amp;oldid=25377993</a></span>
+        </li>
+        <li class="c4 c53 li-bullet-0"><span>Logick&yacute; obvod. In: </span><span class="c3">Wikipedie</span><span>&nbsp;[online]. 2025 [cit. 13.05.2026]. Dostupn&eacute; z: </span><span
+                class="c20"><a class="c15"
+                               href="https://www.google.com/url?q=https://cs.wikipedia.org/w/index.php?title%3DLogick%25C3%25BD_obvod%26oldid%3D24544951&amp;sa=D&amp;source=editors&amp;ust=1778683862494867&amp;usg=AOvVaw3RTmuZWX1_qkPighc8KHOM">https://cs.wikipedia.org/w/index.php?title=Logick%C3%BD_obvod&amp;oldid=24544951</a></span>
+        </li>
+    </ul>
+</main>
