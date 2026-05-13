@@ -2,14 +2,14 @@
 Na této stránce najdete materiály a zdroje, které vám pomohou připravit se na maturitní zkoušku z informatiky a výpočetní techniky na Gymnáziu Litoměřická v Praze.
 
 ## Maturitní okruhy
-1. Informace a dvojková soustava \[D]
-2. Digitální reprezentace informací \[D]
+1. [Informace a dvojková soustava](/okruhy/Informace%20a%20dvojková%20soustava) \[K]
+2. [Digitální reprezentace informací](/okruhy/Digitální%20reprezentace%20informací) \[K]
 3. [Přenos informací](/okruhy/Přenos%20informací) \[K]
 4. [Historie a technologie výpočetní techniky](/okruhy/Historie%20a%20technologie%20výpočetní%20techniky) \[K]
 5. Základy číslicové techniky \[D]
-6. Počítač a jeho komponenty \[D]
-7. GPU a CPU \[D]
-8. Paměť \[D]
+6. [Počítač a jeho komponenty](/okruhy/Počítač%20a%20jeho%20komponenty) \[K]
+7. [GPU a CPU](/okruhy/CPU%20a%20GPU) \[K]
+8. [Paměť](/okruhy/Paměť) \[H]
 9. [Periferní zařízení připojená k počítači](/okruhy/Periferní%20zařízení%20připojená%20k%20počítači) \[K]
 10. [Operační systémy](/okruhy/Operační%20systémy) \[K]
 11. [Desktopové aplikace](/okruhy/Desktopové%20aplikace) \[K]
