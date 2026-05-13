@@ -2292,6 +2292,37 @@ title: "Základy číslicové techniky"
         font-size: 11pt;
         font-family: "Arial"
     }
+
+    /** styly na opravu blbostí */
+    @media screen and (max-width: 600px) {
+        /* Force the table to not behave like a table anymore */
+        #achjo, #achjo thead, #achjo tbody, #achjo th, #achjo td, #achjo tr {
+            display: block;
+        }
+
+        #achjo tr {
+            border: none;
+            margin-bottom: 10px;
+            height: fit-content;
+        }
+
+        #achjo td {
+            border: none;
+            border-bottom: 1px solid #eee;
+            position: relative;
+            margin: 0;
+        }
+
+        img {
+            max-width: 100% !important;
+            width: unset;
+            height: auto;
+        }
+
+        span:has(img) {
+            all: unset !important;;
+        }
+    }
 </style>
 <main class="c58 doc-content">
     <h2>Osnova</h2>
@@ -2587,7 +2618,7 @@ title: "Základy číslicové techniky"
         <li class="c2 c4 li-bullet-0"><span class="c6">existuj&iacute; i IMPLY a NIMPLY pro implikaci</span></li>
     </ul>
     <p class="c2 c21"><span class="c6"></span></p>
-    <table class="c25">
+    <table class="c25" id="achjo">
         <tr class="c26">
             <td class="c24" colspan="1" rowspan="1"><h3 class="c33" id="h.36yjvi7fj52x"><span class="c14">Opakova&#269; (repeater)</span>
             </h3>
